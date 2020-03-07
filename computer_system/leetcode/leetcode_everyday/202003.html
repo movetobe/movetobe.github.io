@@ -365,66 +365,65 @@
 <p>&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x9898;&#x76EE;&#x662F;&#xFF0C;&#x5982;&#x4F55;&#x5728;O(1)&#x65F6;&#x95F4;&#x5185;&#x83B7;&#x53D6;&#x6808;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x3002;&#x7C7B;&#x4F3C;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x91C7;&#x7528;&#x4E24;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x539F;&#x59CB;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x53EF;&#x80FD;&#x6210;&#x4E3A;&#x4E0B;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x503C;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x4E3A;&#x5355;&#x8C03;&#x9012;&#x51CF;&#x961F;&#x5217;(&#x5373;&#x4FDD;&#x6301;&#x4ECE;front-&gt;rear&#x7684;&#x6570;&#x636E;&#x9012;&#x51CF;)&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4FDD;&#x6301;&#x9012;&#x51CF;&#xFF1F;</p>
 <blockquote>
 <ul>
-<li>&#x5F53;&#x65B0;&#x6765;&#x7684;&#x6570;&#x636E;&#x6BD4;&#x524D;&#x9762;&#x7684;&#x6570;&#x636E;&#x5927;&#xFF0C;&#x6BEB;&#x65E0;&#x7591;&#x95EE;&#xFF0C;&#x90A3;&#x4E9B;&#x6BD4;&#x5B83;&#x5927;&#x7684;&#x6570;&#x636E;&#x90FD;&#x6CA1;&#x6709;&#x7528;&#x5904;&#x4E86;&#x3002;&#x56E0;&#x4E3A;&#x5728;&#x5B83;&#x4EEC;&#x51FA;&#x961F;&#x5217;&#x4E4B;&#x524D;&#xFF0C;&#x6700;&#x5927;&#x503C;&#x6C38;&#x8FDC;&#x90FD;&#x662F;&#x521A;&#x6765;&#x7684;&#x8FD9;&#x4E2A;&#x6570;&#x3002;  </li>
+<li>&#x5F53;&#x65B0;&#x6765;&#x7684;&#x6570;&#x636E;&#x6BD4;&#x524D;&#x9762;&#x7684;&#x6570;&#x636E;&#x5927;&#xFF0C;&#x6BEB;&#x65E0;&#x7591;&#x95EE;&#xFF0C;&#x90A3;&#x4E9B;&#x6BD4;&#x5B83;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x90FD;&#x6CA1;&#x6709;&#x7528;&#x5904;&#x4E86;&#x3002;&#x56E0;&#x4E3A;&#x5728;&#x5B83;&#x4EEC;&#x51FA;&#x961F;&#x5217;&#x4E4B;&#x524D;&#xFF0C;&#x6700;&#x5927;&#x503C;&#x6C38;&#x8FDC;&#x90FD;&#x662F;&#x521A;&#x6765;&#x7684;&#x8FD9;&#x4E2A;&#x6570;&#x3002;  </li>
 <li>&#x5F53;&#x65B0;&#x6765;&#x7684;&#x6570;&#x636E;&#x6BD4;&#x524D;&#x9762;&#x6570;&#x636E;&#x5C0F;&#xFF0C;&#x90A3;&#x4E48;&#x524D;&#x9762;&#x7684;&#x6570;&#x636E;&#x90FD;&#x51FA;&#x961F;&#x5217;&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x662F;&#x6709;&#x53EF;&#x80FD;&#x6210;&#x4E3A;&#x6700;&#x5927;&#x503C;&#x7684;&#x3002;</li>
 </ul>
 </blockquote>
 <p>&#x4F8B;&#x5B50;&#xFF1A;[3, 4, 4, 3, 5]&#xFF0C;&#x4E3B;&#x961F;&#x5217;A&#xFF0C;&#x8F85;&#x52A9;&#x961F;&#x5217;B  </p>
 <ul>
 <li>A: [3], B: [3]</li>
-<li>A: [3, 4], B: [4] /<em> B&#x4FDD;&#x6301;&#x4ECE;front-&gt;rear&#x9012;&#x51CF;&#xFF0C;&#x6545;3&#x88AB;&#x53BB;&#x6389;&#xFF0C;4&#x5165;&#x961F;&#x5217; </em>/</li>
-<li>A: [3, 4, 4], B: [4, 4] /<em> &#x4E3A;&#x5224;&#x65AD;B&#x4F55;&#x65F6;&#x51FA;&#x961F;&#x5217;&#xFF0C;B&#x975E;&#x4E25;&#x683C;&#x5355;&#x8C03;&#x9012;&#x51CF;&#x961F;&#x5217; </em>/</li>
-<li>A: [3, 4, 4, 3], B: [4, 4, 3] /<em> &#x76F4;&#x63A5;&#x5165;&#x961F;&#x5217;&#xFF0C;&#x56E0;&#x4E3A;&#x80FD;&#x4FDD;&#x6301;&#x9012;&#x51CF;</em>/</li>
-<li><p>A: [3, 4, 4, 3], B: [5]
-&#x83B7;&#x53D6;&#x961F;&#x5217;&#x6700;&#x5927;&#x503C;&#x5C31;&#x76F4;&#x63A5;&#x4ECE;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x7684;front&#x53D6;&#x503C;&#x3002;&#x51FA;&#x961F;&#x5217;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x961F;&#x5217;&#x7684;&#x503C;&#x4E0E;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x7684;front&#x4F4D;&#x7F6E;&#x503C;&#x76F8;&#x7B49;&#xFF0C;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x4E5F;&#x8981;&#x51FA;&#x961F;&#x5217;&#x3002;
-&#x5177;&#x4F53;&#x5B9E;&#x73B0;: (push&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x662F;O(1)&#x590D;&#x6742;&#x5EA6;)</p>
+<li>A: [3, 4], B: [4] /* B&#x4FDD;&#x6301;&#x4ECE;front-&gt;rear&#x9012;&#x51CF;&#xFF0C;&#x6545;3&#x88AB;&#x53BB;&#x6389;&#xFF0C;4&#x5165;&#x961F;&#x5217; */</li>
+<li>A: [3, 4, 4], B: [4, 4] /* &#x4E3A;&#x5224;&#x65AD;B&#x4F55;&#x65F6;&#x51FA;&#x961F;&#x5217;&#xFF0C;B&#x975E;&#x4E25;&#x683C;&#x5355;&#x8C03;&#x9012;&#x51CF;&#x961F;&#x5217; */</li>
+<li>A: [3, 4, 4, 3], B: [4, 4, 3] /* &#x76F4;&#x63A5;&#x5165;&#x961F;&#x5217;&#xFF0C;&#x56E0;&#x4E3A;&#x80FD;&#x4FDD;&#x6301;&#x9012;&#x51CF; */</li>
+<li>A: [3, 4, 4, 3], B: [5]</li>
+</ul>
+<p>&#x83B7;&#x53D6;&#x961F;&#x5217;&#x6700;&#x5927;&#x503C;&#x5C31;&#x76F4;&#x63A5;&#x4ECE;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x7684;front&#x53D6;&#x503C;&#x3002;&#x51FA;&#x961F;&#x5217;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x961F;&#x5217;&#x7684;&#x503C;&#x4E0E;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x7684;front&#x4F4D;&#x7F6E;&#x503C;&#x76F8;&#x7B49;&#xFF0C;&#x8F85;&#x52A9;&#x961F;&#x5217;&#x4E5F;&#x8981;&#x51FA;&#x961F;&#x5217;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x5B9E;&#x73B0;: (push&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x662F;O(1)&#x590D;&#x6742;&#x5EA6;)</p>
 <pre><code>struct max_queue {
-  int value[QUEUE_LEN];
-  int front;
-  int rear;
-  int max_value[QUEUE_LEN];
-  int max_front;
-  int max_rear;
+    int value[QUEUE_LEN];
+    int front;
+    int rear;
+    int max_value[QUEUE_LEN];
+    int max_front;
+    int max_rear;
 };
 int get_queue_max_value(struct max_queue *obj)
 {
-  return (queue_empty(obj) ? -1 : obj-&gt;max_value[obj-&gt;max_front]);
+    return (queue_empty(obj) ? -1 : obj-&gt;max_value[obj-&gt;max_front]);
 }
 void enqueue(struct max_queue *obj, int value)
 {
-  /* while max_value not empty, keep queue decrease */
-  while (obj-&gt;max_front != obj-&gt;max_rear) {
-      obj-&gt;max_rear = (obj-&gt;max_rear + QUEUE_LEN - 1) % QUEUE_LEN;
-      if (value &lt;= obj-&gt;max_value[obj-&gt;max_rear]) {
-          obj-&gt;max_rear = (obj-&gt;max_rear + 1) % QUEUE_LEN;
-          break;
-      }
-  }
-  obj-&gt;max_value[obj-&gt;max_rear] = value;
-  obj-&gt;max_rear = (obj-&gt;max_rear + 1) % QUEUE_LEN;
+    /* while max_value not empty, keep queue decrease */
+    while (obj-&gt;max_front != obj-&gt;max_rear) {
+        obj-&gt;max_rear = (obj-&gt;max_rear + QUEUE_LEN - 1) % QUEUE_LEN;
+        if (value &lt;= obj-&gt;max_value[obj-&gt;max_rear]) {
+            obj-&gt;max_rear = (obj-&gt;max_rear + 1) % QUEUE_LEN;
+            break;
+        }
+    }
+    obj-&gt;max_value[obj-&gt;max_rear] = value;
+    obj-&gt;max_rear = (obj-&gt;max_rear + 1) % QUEUE_LEN;
 
-  obj-&gt;value[obj-&gt;rear] = value;
-  obj-&gt;rear = (obj-&gt;rear + 1) % QUEUE_LEN;
+    obj-&gt;value[obj-&gt;rear] = value;
+    obj-&gt;rear = (obj-&gt;rear + 1) % QUEUE_LEN;
 }
 int dequeue(struct max_queue *obj)
 {
-  int value;
+    int value;
 
-  if (queue_empty(obj)) {
-      return -1;
-  }
-  value = obj-&gt;value[obj-&gt;front];
-  obj-&gt;front = (obj-&gt;front + 1) % QUEUE_LEN;
+    if (queue_empty(obj)) {
+        return -1;
+    }
+    value = obj-&gt;value[obj-&gt;front];
+    obj-&gt;front = (obj-&gt;front + 1) % QUEUE_LEN;
 
-  if (value == obj-&gt;max_value[obj-&gt;max_front]) {
-      obj-&gt;max_front = (obj-&gt;max_front + 1) % QUEUE_LEN;
-  }
-  return value;
+    if (value == obj-&gt;max_value[obj-&gt;max_front]) {
+        obj-&gt;max_front = (obj-&gt;max_front + 1) % QUEUE_LEN;
+    }
+    return value;
 }
-</code></pre></li>
-</ul>
-<footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-03-07 16:23:55
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2020-03-07 20:11:18
 </span></footer>
                                 
                                 </section>
@@ -468,7 +467,7 @@ int dequeue(struct max_queue *obj)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"next":{"title":"阅读","level":"1.3","depth":1,"path":"readings/readings.md","ref":"readings/readings.md","articles":[{"title":"看见","level":"1.3.1","depth":2,"path":"readings/see/reading.md","ref":"readings/see/reading.md","articles":[]}]},"previous":{"title":"leetcode","level":"1.2.2","depth":2,"path":"computer_system/leetcode/leetcode.md","ref":"computer_system/leetcode/leetcode.md","articles":[{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"path":"computer_system/leetcode/leetcode_everyday/202003.md","ref":"computer_system/leetcode/leetcode_everyday/202003.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/leetcode/leetcode_everyday/202003.md","mtime":"2020-03-07T08:23:55.203Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-07T08:42:03.163Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"next":{"title":"阅读","level":"1.3","depth":1,"path":"readings/readings.md","ref":"readings/readings.md","articles":[{"title":"看见","level":"1.3.1","depth":2,"path":"readings/see/reading.md","ref":"readings/see/reading.md","articles":[]}]},"previous":{"title":"leetcode","level":"1.2.2","depth":2,"path":"computer_system/leetcode/leetcode.md","ref":"computer_system/leetcode/leetcode.md","articles":[{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"path":"computer_system/leetcode/leetcode_everyday/202003.md","ref":"computer_system/leetcode/leetcode_everyday/202003.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/leetcode/leetcode_everyday/202003.md","mtime":"2020-03-07T12:11:18.015Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-07T12:12:24.771Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
