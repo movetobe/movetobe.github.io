@@ -483,8 +483,35 @@ int coinChange(int* coins, int coinsSize, int amount){
     free(cost);
     return num;
 }
+</code></pre><h3 id="20200310-543-&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x76F4;&#x5F84;"><em>2020/03/10 <a href="https://leetcode-cn.com/problems/diameter-of-binary-tree/" target="_blank">[543. &#x4E8C;&#x53C9;&#x6811;&#x7684;&#x76F4;&#x5F84;]</a></em></h3>
+<p><em>&#x7ED9;&#x5B9A;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x5B83;&#x7684;&#x76F4;&#x5F84;&#x957F;&#x5EA6;&#x3002;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x76F4;&#x5F84;&#x957F;&#x5EA6;&#x662F;&#x4EFB;&#x610F;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#x8DEF;&#x5F84;&#x957F;&#x5EA6;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;&#x3002;&#x8FD9;&#x6761;&#x8DEF;&#x5F84;&#x53EF;&#x80FD;&#x7A7F;&#x8FC7;&#x6839;&#x7ED3;&#x70B9;&#x3002;</em></p>
+<pre><code>int longest_path(struct TreeNode *root, int *longest)
+{
+    int left = 0, right = 0;
+
+    if (!root) {
+        return 0;
+    }
+
+    left = longest_path(root-&gt;left, longest);
+    right = longest_path(root-&gt;right, longest);
+    if (root-&gt;left) {
+        left++;
+    }
+    if (root-&gt;right) {
+        right++;
+    }
+    *longest = *longest &lt; (left + right) ? (left + right) : *longest;
+    return (left &gt; right) ? left : right;
+}
+
+int diameterOfBinaryTree(struct TreeNode* root){
+    int longest = 0;
+    (void)longest_path(root, &amp;longest);
+    return longest;
+}
 </code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-03-09 00:05:05
+2020-03-12 08:01:29
 </span></footer>
                                 
                                 </section>
@@ -528,7 +555,7 @@ int coinChange(int* coins, int coinsSize, int amount){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"next":{"title":"每周一赛-179-week","level":"1.2.2.2","depth":3,"path":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","ref":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","articles":[]},"previous":{"title":"leetcode","level":"1.2.2","depth":2,"path":"computer_system/leetcode/leetcode.md","ref":"computer_system/leetcode/leetcode.md","articles":[{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"path":"computer_system/leetcode/leetcode_everyday/202003.md","ref":"computer_system/leetcode/leetcode_everyday/202003.md","articles":[]},{"title":"每周一赛-179-week","level":"1.2.2.2","depth":3,"path":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","ref":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/leetcode/leetcode_everyday/202003.md","mtime":"2020-03-08T16:05:05.433Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-08T23:55:48.659Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"next":{"title":"每周一赛-179-week","level":"1.2.2.2","depth":3,"path":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","ref":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","articles":[]},"previous":{"title":"leetcode","level":"1.2.2","depth":2,"path":"computer_system/leetcode/leetcode.md","ref":"computer_system/leetcode/leetcode.md","articles":[{"title":"每日一题-2020/03","level":"1.2.2.1","depth":3,"path":"computer_system/leetcode/leetcode_everyday/202003.md","ref":"computer_system/leetcode/leetcode_everyday/202003.md","articles":[]},{"title":"每周一赛-179-week","level":"1.2.2.2","depth":3,"path":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","ref":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/leetcode/leetcode_everyday/202003.md","mtime":"2020-03-12T00:01:29.202Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-12T00:06:38.416Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
