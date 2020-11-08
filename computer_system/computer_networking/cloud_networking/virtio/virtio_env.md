@@ -176,9 +176,35 @@ virsh console centos_vm1
 
 也可以通过vnc登录，安装使用[VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
 
-
+同理，可以配置并启动vm2。进入vm后，配置对应的IP地址，确认两台vm的通信。至此，通过发行的ovs+dpdk搭建组网，libvirt+qemu+kvm管理vm，搭建简单的vhost实验环境。
 
 > ### <span id = "build_virt_env"> 编译、安装ovs+dpdk</span>
+
+#### 1. 下载和编译DPDK
+本文下载的是[DPDK官网](http://core.dpdk.org/download/)的DPDK 19.11.5(LTS)，按照文档编译安装即可。如下为编译脚本：
+
+```
+export DPDK_DIR=`pwd`
+export DPDK_TARGET=x86_64-native-linuxapp-gcc
+export DPDK_BUILD=$DPDK_DIR/$DPDK_TARGET
+make install T=$DPDK_TARGET DESTDIR=install
+```
+
+#### 2. 下载和编译OVS
+本文下载的是[OVS官网](http://www.openvswitch.org/download/)的Open vSwitch v2.13.1，按照文档编译安装。如下为编译脚本：
+
+```
+DPDK_DIR="../../dpdk/dpdk-stable-19.11.5"
+DPDK_TARGET=x86_64-native-linuxapp-gcc
+DPDK_BUILD=$DPDK_DIR/$DPDK_TARGET
+./boot.sh
+./configure CFLAGS="-g -msse4.2 -Wno-cast-align" --prefix=/usr --localstatedir=/var --sysconfdir=/etc --with-dpdk=$DPDK_BUILD --enable-Werror
+make
+make install
+service openvswitch-switch restart
+```
+
+由于使用ubuntu自带的ovs和dpdk，启动参数使用自带的service来启动。这里编译安装后，直接service重启就可以使用。
 
 > ### <span id = "problems"> 搭建环境中碰到的问题 </span>
 
@@ -194,4 +220,17 @@ virsh console centos_vm1
     #virt-customize -a centos-vm1.qcow2 --root-password password:your-password
     ```
 
-#### 2. 
+#### 2. 宿主机是否支持虚拟化
+* 安装cpu-checker
+```
+#apt install cpu-checker
+```
+
+* 使用命令kvm-ok，如下表示kvm可用
+```
+#kvm-ok
+INFO: /dev/kvm exists
+KVM acceleration can be used
+```
+
+如果不可用，需要打开硬件虚拟化VT-x/AMD-V。由于我的宿主机是在vbox上运行的ubuntu20.04，直接在vbox该vm的设置->系统->处理器中，选中启用嵌套VT-x/AMD-V的选项，重启机器。如果是服务器，需要在启动项中去打开VT-x/AMD-v。
