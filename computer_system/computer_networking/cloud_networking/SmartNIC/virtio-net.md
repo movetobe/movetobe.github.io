@@ -39,9 +39,11 @@ struct vring_used {
 ```
 
 descriptors就是存在报文地址（vm物理地址），该地址指向空间的大小。还有flags标记描述符类型，NEXT表示是一个由多个描述符组成的一个报文，INDIRECT则表示addr不再是指向报文存储的地址，而是另一个描述符的地址。next指针如果有flags为NEXT，就是指向下一个描述符，内核里也用来把没空闲的描述符连接起来。
+
 vm发送报文（vm tx）：
 available ring就是由virtio-net把要发送的报文的描述符id放入ring[]中，idx表示下一个要放的ring[]的位置。
 used ring是virtio-net用来回收已经用过的描述符，也就是virtio-device在从avail ring中读取报文后，会把用完的描述符放入used ring中。
+
 vm接收报文（vm rx）:
 used ring是virtio-device会把要发送的报文的描述符id放入used ring[]中，virtio-net通过used ring来读取收到的报文。
 avail ring是virtio-net把从used ring中读取报文后的描述符放入avail ring中。
