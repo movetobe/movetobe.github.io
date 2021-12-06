@@ -760,146 +760,138 @@
                                 
                                 <h2 id="&#x64CD;&#x4F5C;&#x6307;&#x4EE4;">&#x64CD;&#x4F5C;&#x6307;&#x4EE4;</h2>
 <h3 id="&#x6570;&#x636E;&#x4F20;&#x9001;&#x6307;&#x4EE4;mov">&#x6570;&#x636E;&#x4F20;&#x9001;&#x6307;&#x4EE4;MOV</h3>
-<blockquote>
-<p>MOV S, D</p>
+<h4 id="mov-s-d">MOV S, D</h4>
 <ul>
 <li>movb/movw/movl/movq&#x5206;&#x522B;&#x4F20;&#x9001;1/2/4/8&#x5B57;&#x8282;&#x6570;&#x636E;</li>
 <li>movabsq&#x4F20;&#x9001;&#x7EDD;&#x5BF9;&#x7684;8&#x5B57;&#x8282;</li>
 <li>&#x6E90;&#x64CD;&#x4F5C;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x7ACB;&#x5373;&#x6570;&#xFF0C;&#x5B58;&#x50A8;&#x5728;&#x5BC4;&#x5B58;&#x5668;&#x6216;&#x8005;&#x5185;&#x5B58;&#x4E2D;</li>
 <li>&#x76EE;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x8981;&#x4E48;&#x662F;&#x5BC4;&#x5B58;&#x5668;&#x6216;&#x8005;&#x5185;&#x5B58;&#x5730;&#x5740;</li>
-<li>x86-64&#x8981;&#x6C42;&#x4E0D;&#x80FD;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x90FD;&#x662F;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5185;&#x5B58;-&gt;&#x5185;&#x5B58;&#x9700;&#x8981;&#x4E24;&#x6761;&#x6307;&#x4EE4;&#x5B8C;&#x6210;</li>
+<li>x86-64&#x8981;&#x6C42;&#x4E0D;&#x80FD;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x90FD;&#x662F;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5185;&#x5B58;-####&#x5185;&#x5B58;&#x9700;&#x8981;&#x4E24;&#x6761;&#x6307;&#x4EE4;&#x5B8C;&#x6210;</li>
 <li>movl&#x6307;&#x4EE4;&#x4EE5;&#x5BC4;&#x5B58;&#x5668;&#x4F5C;&#x4E3A;&#x76EE;&#x7684;&#x65F6;&#xFF0C;&#x4F1A;&#x628A;&#x8BE5;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x9AD8;4&#x5B57;&#x8282;&#x7F6E;0</li>
 </ul>
-<p>MOVZ S, R</p>
+<h4 id="movz-s-r">MOVZ S, R</h4>
 <ul>
 <li>&#x628A;&#x76EE;&#x7684;&#x4E2D;&#x5269;&#x4F59;&#x5B57;&#x8282;&#x586B;&#x5145;0</li>
 <li>movzbw/movzbl/movzbq/movzwl/movzwq</li>
 </ul>
-<p>MOVS S, R</p>
+<h4 id="movs-s-r">MOVS S, R</h4>
 <ul>
 <li>&#x628A;&#x76EE;&#x7684;&#x5269;&#x4F59;&#x5B57;&#x8282;&#x586B;&#x5145;&#x7B26;&#x53F7;&#x4F4D;</li>
 <li>movsbw/movsbl/movsbq/movswl/movswq/movslq</li>
 <li>cltq &#x5C06;%eax&#x7B26;&#x53F7;&#x62D3;&#x5C55;&#x5230;%rax</li>
 </ul>
-</blockquote>
 <h3 id="&#x538B;&#x6808;&#x548C;&#x5F39;&#x6808;&#x6307;&#x4EE4;">&#x538B;&#x6808;&#x548C;&#x5F39;&#x6808;&#x6307;&#x4EE4;</h3>
-<blockquote>
-<p>pushq S</p>
+<h4 id="pushq-s">pushq S</h4>
 <ul>
 <li>&#x5C06;8&#x5B57;&#x8282;&#x538B;&#x6808;&#xFF0C;&#x6808;&#x6307;&#x9488;&#x4FDD;&#x5B58;&#x5728;$\%rsp$&#x4E2D;</li>
 <li>$R[\%rsp] = R[\%rsp] - 8$</li>
 <li>$M[R[\%rsp]] = S$</li>
 </ul>
-<p>popq D</p>
+<h4 id="popq-d">popq D</h4>
 <ul>
 <li>&#x5C06;8&#x5B57;&#x8282;&#x51FA;&#x6808;</li>
 <li>$D = M[R[\%rsp]]$</li>
 <li>$R[\%rsp] = R[\%rsp] + 8$</li>
 </ul>
-</blockquote>
 <h3 id="&#x7B97;&#x672F;&#x4E0E;&#x903B;&#x8F91;&#x6307;&#x4EE4;">&#x7B97;&#x672F;&#x4E0E;&#x903B;&#x8F91;&#x6307;&#x4EE4;</h3>
-<blockquote>
-<p>leaq S, D</p>
+<h4 id="leaq-s-d">leaq S, D</h4>
 <ul>
 <li>&#x5C06;S&#x7684;&#x5730;&#x5740;&#x52A0;&#x8F7D;&#x5230;D&#x4E2D;&#xFF0C;&#x5373;$D = \&amp;S$</li>
 </ul>
-<p>INC D</p>
+<h4 id="inc-d">INC D</h4>
 <ul>
 <li>$D = D + 1$</li>
 </ul>
-<p>DEC D</p>
+<h4 id="dec-d">DEC D</h4>
 <ul>
 <li>$D = D - 1$</li>
 </ul>
-<p>NEG D</p>
+<h4 id="neg-d">NEG D</h4>
 <ul>
 <li>$D = -D$</li>
 </ul>
-<p>NOT D</p>
+<h4 id="not-d">NOT D</h4>
 <ul>
 <li>$D = ~D$</li>
 </ul>
-<p>ADD S, D</p>
+<h4 id="add-s-d">ADD S, D</h4>
 <ul>
 <li>$D = D + S$</li>
 </ul>
-<p>SUB S, D</p>
+<h4 id="sub-s-d">SUB S, D</h4>
 <ul>
 <li>$D = D - S$</li>
 </ul>
-<p>IMUL S, D</p>
+<h4 id="imul-s-d">IMUL S, D</h4>
 <ul>
 <li>$D = D * S$</li>
 </ul>
-<p>XOR S, D</p>
+<h4 id="xor-s-d">XOR S, D</h4>
 <ul>
 <li>$D = D ^ S$</li>
 </ul>
-<p>OR S, D</p>
+<h4 id="or-s-d">OR S, D</h4>
 <ul>
 <li>$D = D | S$</li>
 </ul>
-<p>AND S, D</p>
+<h4 id="and-s-d">AND S, D</h4>
 <ul>
 <li>$D = D \&amp; S$</li>
 </ul>
-<p>SAL k, D</p>
+<h4 id="sal-k-d">SAL k, D</h4>
 <ul>
 <li>$D = D &lt;&lt; k$</li>
 </ul>
-<p>SHL k, D</p>
+<h4 id="shl-k-d">SHL k, D</h4>
 <ul>
 <li>$D = D &lt;&lt; k$</li>
 </ul>
-<p>SAR k, D</p>
+<h4 id="sar-k-d">SAR k, D</h4>
 <ul>
 <li>$D = D &gt;&gt; k$</li>
 <li>&#x7B97;&#x672F;&#x53F3;&#x79FB;</li>
 </ul>
-<p>SHR k, D</p>
+<h4 id="shr-k-d">SHR k, D</h4>
 <ul>
 <li>$D = D &gt;&gt; k$</li>
 <li>&#x903B;&#x8F91;&#x53F3;&#x79FB;</li>
 </ul>
-</blockquote>
 <h3 id="&#x63A7;&#x5236;&#x6307;&#x4EE4;">&#x63A7;&#x5236;&#x6307;&#x4EE4;</h3>
-<blockquote>
-<p>CMP S1, S2</p>
+<h4 id="cmp-s1-s2">CMP S1, S2</h4>
 <ul>
 <li>&#x6BD4;&#x8F83;S1&#x548C;S2&#x7684;&#x503C;</li>
 <li>&#x6761;&#x4EF6;&#x7801;&#x5BC4;&#x5B58;&#x5668;&#xFF1A;CF(&#x8FDB;&#x4F4D;&#x6807;&#x5FD7;)/ZF(&#x96F6;&#x6807;&#x5FD7;)/SF(&#x7B26;&#x53F7;&#x6807;&#x5FD7;)/OF(&#x6EA2;&#x51FA;&#x6807;&#x5FD7;)</li>
 </ul>
-<p>jmp Label</p>
+<h4 id="jmp-label">jmp Label</h4>
 <ul>
 <li>&#x76F4;&#x63A5;&#x8DF3;&#x8F6C;</li>
 </ul>
-<p>jmp *Operand</p>
+<h4 id="jmp-operand">jmp *Operand</h4>
 <ul>
 <li>&#x95F4;&#x63A5;&#x8DF3;&#x8F6C;</li>
 </ul>
-<p>je/jz/jne/jnz Label</p>
+<h4 id="jejzjnejnz-label">je/jz/jne/jnz Label</h4>
 <ul>
 <li>&#x76F8;&#x7B49;/&#x96F6; &#x6216;&#x8005; &#x4E0D;&#x76F8;&#x7B49;/&#x975E;&#x96F6;&#x7684;&#x65F6;&#x5019;&#x8DF3;&#x8F6C;</li>
 <li>&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x8F6C;&#x79FB;&#x6D89;&#x53CA;&#x5206;&#x652F;&#x9884;&#x6D4B;&#xFF0C;&#x4E00;&#x65E6;&#x9884;&#x6D4B;&#x5931;&#x8D25;&#xFF0C;&#x5F71;&#x54CD;&#x6D41;&#x6C34;&#x7EBF;&#xFF0C;&#x8FDB;&#x800C;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#x3002;</li>
 <li>&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x6761;&#x4EF6;&#x4F20;&#x9001;&#x6307;&#x4EE4;</li>
 </ul>
-<p>&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x8F6C;&#x79FB;&#xFF1A;</p>
+<h4 id="&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x8F6C;&#x79FB;&#xFF1A;">&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x8F6C;&#x79FB;&#xFF1A;</h4>
 <pre><code>if (test-express) {
     then-express;
 } else {
     else-express;
 }
-</code></pre><p>&#x6761;&#x4EF6;&#x4F20;&#x9001;&#xFF1A;</p>
+</code></pre><h4 id="&#x6761;&#x4EF6;&#x4F20;&#x9001;&#xFF1A;">&#x6761;&#x4EF6;&#x4F20;&#x9001;&#xFF1A;</h4>
 <pre><code>v = then-express;
 ve = else-express;
 if (!test-express) v = ve;
-</code></pre></blockquote>
-<h3 id="switch&#x8BED;&#x53E5;">switch&#x8BED;&#x53E5;</h3>
+</code></pre><h3 id="switch&#x8BED;&#x53E5;">switch&#x8BED;&#x53E5;</h3>
 <ul>
 <li>switch&#x8BED;&#x53E5;&#x901A;&#x8FC7;&#x8DF3;&#x8F6C;&#x8868;&#x76F4;&#x63A5;&#x8DF3;&#x8F6C;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5206;&#x652F;&#x4E0A; </li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019-2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2021-12-06 21:30:50
+2021-12-06 22:12:23
 </span></footer>
                                 
                                 </section>
@@ -943,7 +935,7 @@ if (!test-express) v = ve;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2. 操作指令","level":"1.2.1.3.2","depth":4,"next":{"title":"3. 过程","level":"1.2.1.3.3","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","articles":[]},"previous":{"title":"1. 操作数(operand)","level":"1.2.1.3.1","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2021","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","mtime":"2021-12-06T13:30:50.856Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T14:00:18.925Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2. 操作指令","level":"1.2.1.3.2","depth":4,"next":{"title":"3. 过程","level":"1.2.1.3.3","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","articles":[]},"previous":{"title":"1. 操作数(operand)","level":"1.2.1.3.1","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2021","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","mtime":"2021-12-06T14:12:23.391Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T14:13:12.629Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

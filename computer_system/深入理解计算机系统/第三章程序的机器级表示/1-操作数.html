@@ -760,51 +760,47 @@
                                 
                                 <h2 id="&#x64CD;&#x4F5C;&#x6570;&#x6307;&#x793A;&#x7B26;">&#x64CD;&#x4F5C;&#x6570;&#x6307;&#x793A;&#x7B26;</h2>
 <h3 id="x86-64&#x64CD;&#x4F5C;&#x6570;&#x683C;&#x5F0F;-att&#x683C;&#x5F0F;&#x6C47;&#x7F16;">x86-64&#x64CD;&#x4F5C;&#x6570;&#x683C;&#x5F0F; (AT&amp;T&#x683C;&#x5F0F;&#x6C47;&#x7F16;)</h3>
-<blockquote>
-<p>&#x7ACB;&#x5373;&#x6570;&#x5BFB;&#x5740;</p>
+<h4 id="&#x7ACB;&#x5373;&#x6570;&#x5BFB;&#x5740;">&#x7ACB;&#x5373;&#x6570;&#x5BFB;&#x5740;</h4>
 <ul>
 <li>&#x683C;&#x5F0F;: $$Imm$</li>
 <li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $Imm$</li>
 </ul>
-<p>&#x5BC4;&#x5B58;&#x5668;&#x5BFB;&#x5740;</p>
+<h4 id="&#x5BC4;&#x5B58;&#x5668;&#x5BFB;&#x5740;">&#x5BC4;&#x5B58;&#x5668;&#x5BFB;&#x5740;</h4>
 <ul>
 <li>&#x683C;&#x5F0F;: $r_a$</li>
 <li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $R[r_a]$</li>
 </ul>
-<p>&#x7EDD;&#x5BF9;&#x5BFB;&#x5740;</p>
+<h4 id="&#x7EDD;&#x5BF9;&#x5BFB;&#x5740;">&#x7EDD;&#x5BF9;&#x5BFB;&#x5740;</h4>
 <ul>
 <li>&#x683C;&#x5F0F;: $Imm$</li>
 <li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[Imm]$</li>
 </ul>
-<p>&#x95F4;&#x63A5;&#x5BFB;&#x5740;</p>
+<h4 id="&#x95F4;&#x63A5;&#x5BFB;&#x5740;">&#x95F4;&#x63A5;&#x5BFB;&#x5740;</h4>
 <ul>
 <li>&#x683C;&#x5F0F;: $(r_a)$</li>
 <li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[R[r_a]]$</li>
 </ul>
-<p>(&#x57FA;&#x5740; + &#x504F;&#x79FB;&#x91CF;)&#x5BFB;&#x5740;</p>
+<h4 id="&#x57FA;&#x5740;--&#x504F;&#x79FB;&#x91CF;&#x5BFB;&#x5740;">(&#x57FA;&#x5740; + &#x504F;&#x79FB;&#x91CF;)&#x5BFB;&#x5740;</h4>
 <ul>
 <li>&#x683C;&#x5F0F;: $Imm(r_b)$</li>
 <li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[Imm + R[r_b]]$</li>
 </ul>
-<p>&#x53D8;&#x5740;&#x5BFB;&#x5740;</p>
+<h4 id="&#x53D8;&#x5740;&#x5BFB;&#x5740;">&#x53D8;&#x5740;&#x5BFB;&#x5740;</h4>
 <ul>
 <li>&#x683C;&#x5F0F;: $(r_b, r_i)$</li>
-<li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[R[r_b] + R[r_i]]$</li>
-</ul>
-</blockquote>
-<ul>
-<li>&#x683C;&#x5F0F;: $Imm(r_b, r_i)$</li>
+<li><p>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[R[r_b] + R[r_i]]$</p>
+</li>
+<li><p>&#x683C;&#x5F0F;: $Imm(r_b, r_i)$</p>
+</li>
 <li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[Imm + R[r_b] + R[r_i]]$</li>
 </ul>
-<blockquote>
-<p>&#x6BD4;&#x4F8B;&#x53D8;&#x5740;&#x5BFB;&#x5740;, s&#x5FC5;&#x987B;&#x662F;1/2/4/8</p>
+<h4 id="&#x6BD4;&#x4F8B;&#x53D8;&#x5740;&#x5BFB;&#x5740;-s&#x5FC5;&#x987B;&#x662F;1248">&#x6BD4;&#x4F8B;&#x53D8;&#x5740;&#x5BFB;&#x5740;, s&#x5FC5;&#x987B;&#x662F;1/2/4/8</h4>
 <ul>
 <li>&#x683C;&#x5F0F;: $(, r_i, s)$</li>
-<li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[R[r_i] \cdot s]$</li>
-</ul>
-</blockquote>
-<ul>
-<li>&#x683C;&#x5F0F;: $Imm(, r_i, s)$</li>
+<li><p>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[R[r_i] \cdot s]$</p>
+</li>
+<li><p>&#x683C;&#x5F0F;: $Imm(, r_i, s)$</p>
+</li>
 <li><p>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[Imm + R[r_i] \cdot s]$</p>
 </li>
 <li><p>&#x683C;&#x5F0F;: $(r_b, r_i, s)$</p>
@@ -816,7 +812,7 @@
 <li>&#x64CD;&#x4F5C;&#x6570;&#x503C;: $M[Imm + R[r_b] + R[r_i] \cdot s]$ </li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019-2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2021-12-06 21:39:43
+2021-12-06 22:09:49
 </span></footer>
                                 
                                 </section>
@@ -860,7 +856,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1. 操作数(operand)","level":"1.2.1.3.1","depth":4,"next":{"title":"2. 操作指令","level":"1.2.1.3.2","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","articles":[]},"previous":{"title":"第三章 程序的机器级表示","level":"1.2.1.3","depth":3,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/chapter3.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/chapter3.md","articles":[{"title":"1. 操作数(operand)","level":"1.2.1.3.1","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","articles":[]},{"title":"2. 操作指令","level":"1.2.1.3.2","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","articles":[]},{"title":"3. 过程","level":"1.2.1.3.3","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2021","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","mtime":"2021-12-06T13:39:43.516Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T14:00:18.925Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1. 操作数(operand)","level":"1.2.1.3.1","depth":4,"next":{"title":"2. 操作指令","level":"1.2.1.3.2","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","articles":[]},"previous":{"title":"第三章 程序的机器级表示","level":"1.2.1.3","depth":3,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/chapter3.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/chapter3.md","articles":[{"title":"1. 操作数(operand)","level":"1.2.1.3.1","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","articles":[]},{"title":"2. 操作指令","level":"1.2.1.3.2","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/2-操作指令.md","articles":[]},{"title":"3. 过程","level":"1.2.1.3.3","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/3-过程.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2021","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","mtime":"2021-12-06T14:09:49.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T14:13:12.629Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
