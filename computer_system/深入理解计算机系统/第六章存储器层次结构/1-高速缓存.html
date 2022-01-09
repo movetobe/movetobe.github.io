@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第三章 程序的机器级表示 · System</title>
+        <title>1. 高速缓存 · System</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1-操作数.html" />
+    <link rel="next" href="../../computer_networking/computer_net.html" />
     
     
-    <link rel="prev" href="../第二章信息的表示和处理/1-整数的运算.html" />
+    <link rel="prev" href="chapter6.html" />
     
 
     </head>
@@ -266,9 +266,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.1.3" data-path="chapter3.html">
+        <li class="chapter " data-level="1.2.1.3" data-path="../第三章程序的机器级表示/chapter3.html">
             
-                <a href="chapter3.html">
+                <a href="../第三章程序的机器级表示/chapter3.html">
             
                     
                     第三章 程序的机器级表示
@@ -280,9 +280,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1.3.1" data-path="1-操作数.html">
+        <li class="chapter " data-level="1.2.1.3.1" data-path="../第三章程序的机器级表示/1-操作数.html">
             
-                <a href="1-操作数.html">
+                <a href="../第三章程序的机器级表示/1-操作数.html">
             
                     
                     1. 操作数(operand)
@@ -293,9 +293,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.3.2" data-path="2-操作指令.html">
+        <li class="chapter " data-level="1.2.1.3.2" data-path="../第三章程序的机器级表示/2-操作指令.html">
             
-                <a href="2-操作指令.html">
+                <a href="../第三章程序的机器级表示/2-操作指令.html">
             
                     
                     2. 操作指令
@@ -306,9 +306,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.3.3" data-path="3-过程.html">
+        <li class="chapter " data-level="1.2.1.3.3" data-path="../第三章程序的机器级表示/3-过程.html">
             
-                <a href="3-过程.html">
+                <a href="../第三章程序的机器级表示/3-过程.html">
             
                     
                     3. 过程
@@ -388,9 +388,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.6" data-path="../第六章存储器层次结构/chapter6.html">
+        <li class="chapter " data-level="1.2.1.6" data-path="chapter6.html">
             
-                <a href="../第六章存储器层次结构/chapter6.html">
+                <a href="chapter6.html">
             
                     
                     第六章 存储器层次结构
@@ -402,9 +402,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1.6.1" data-path="../第六章存储器层次结构/1-高速缓存.html">
+        <li class="chapter active" data-level="1.2.1.6.1" data-path="1-高速缓存.html">
             
-                <a href="../第六章存储器层次结构/1-高速缓存.html">
+                <a href="1-高速缓存.html">
             
                     
                     1. 高速缓存
@@ -839,7 +839,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >第三章 程序的机器级表示</a>
+        <a href="../../.." >1. 高速缓存</a>
     </h1>
 </div>
 
@@ -854,14 +854,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x7B2C;&#x4E09;&#x7AE0;-&#x7A0B;&#x5E8F;&#x7684;&#x673A;&#x5668;&#x7EA7;&#x8868;&#x793A;">&#x7B2C;&#x4E09;&#x7AE0; &#x7A0B;&#x5E8F;&#x7684;&#x673A;&#x5668;&#x7EA7;&#x8868;&#x793A;</h2>
+                                <h3 id="&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;">&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;</h3>
+<p>&#x9AD8;&#x901F;&#x7F13;&#x5B58;(S, E, B, m):</p>
 <ul>
-<li><a href="1-&#x64CD;&#x4F5C;&#x6570;.html">1. &#x64CD;&#x4F5C;&#x6570;(operand)</a></li>
-<li><a href="2-&#x64CD;&#x4F5C;&#x6307;&#x4EE4;.html">2. &#x64CD;&#x4F5C;&#x6307;&#x4EE4;</a></li>
-<li><a href="3-&#x8FC7;&#x7A0B;.html">3. &#x8FC7;&#x7A0B;</a> </li>
+<li>&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5C06;m&#x4E2A;&#x5730;&#x5740;&#x5212;&#x5206;&#x6210;S&#x7EC4;</li>
+<li>&#x6BCF;&#x7EC4;&#x5305;&#x542B;E&#x884C;</li>
+<li>&#x6BCF;&#x884C;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x4F4D;&#xFF0C;&#x4E00;&#x4E9B;&#x6807;&#x5FD7;&#x4F4D;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5757;</li>
+<li>&#x6570;&#x636E;&#x5757;&#x5927;&#x5C0F;B&#x5B57;&#x8282;</li>
+<li>t&#x4F4D;&#x6807;&#x5FD7;&#x4F4D; + s&#x4F4D;&#x7EC4;&#x7D22;&#x5F15; + b&#x4F4D;&#x5757;&#x504F;&#x79FB;&#x7EC4;&#x6210;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x7D22;&#x5F15;&#x5730;&#x5740;&#xFF0C;&#x7D22;&#x5F15;&#x5230;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x4E00;&#x884C;/&#x5757;</li>
+</ul>
+<h3 id="&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x8BFB;">&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x8BFB;</h3>
+<ol>
+<li>&#x7EC4;&#x9009;&#x62E9;</li>
+<li>&#x884C;&#x5339;&#x914D;</li>
+<li>&#x5B57;&#x62BD;&#x53D6;</li>
+<li>&#x4E0D;&#x547D;&#x4E2D;&#x884C;&#x66FF;&#x6362;&#xFF0C;&#x968F;&#x673A;&#x9009;&#x62E9;/Least-Frequently-Used/Least-Recently-Used&#x7B49;&#x66FF;&#x6362;&#x7B97;&#x6CD5;</li>
+</ol>
+<h3 id="&#x5206;&#x7C7B;">&#x5206;&#x7C7B;</h3>
+<ul>
+<li>&#x76F4;&#x63A5;&#x6620;&#x5C04;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#xFF1A;&#x6BCF;&#x7EC4;&#x53EA;&#x6709;1&#x884C;&#xFF0C;&#x5373;E == 1</li>
+<li>&#x7EC4;&#x76F8;&#x8054;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#xFF1A;&#x6BCF;&#x7EC4;&#x6709;&#x591A;&#x884C;&#xFF0C;&#x5373;E &gt; 1</li>
+<li>&#x5168;&#x76F8;&#x8054;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#xFF1A;&#x53EA;&#x6709;&#x4E00;&#x7EC4;&#xFF0C;&#x5373;S == 1&#xFF0C;&#x6784;&#x9020;&#x56F0;&#x96BE;&#xFF0C;&#x6602;&#x8D35;&#xFF0C;&#x901A;&#x5E38;&#x53EA;&#x7528;&#x505A;&#x5C0F;&#x7684;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#xFF0C;&#x5982;Translation-Lookaside-Buffer</li>
+<li>&#x6309;&#x7167;&#x4FDD;&#x5B58;&#x7684;&#x5185;&#x5BB9;:<ul>
+<li>i-cache: &#x53EA;&#x4FDD;&#x5B58;&#x6307;&#x4EE4;&#x7684;&#x9AD8;&#x901F;&#x7F13;&#x5B58;</li>
+<li>d-cache: &#x53EA;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x9AD8;&#x901F;&#x7F13;&#x5B58;</li>
+<li>unified-cache: &#x65E2;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x4E5F;&#x4FDD;&#x5B58;&#x6307;&#x4EE4;&#x7684;&#x9AD8;&#x901F;&#x7F13;&#x5B58;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5199;&#x5B57;w">&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5199;&#x5B57;w</h3>
+<ul>
+<li>&#x5199;&#x547D;&#x4E2D;(write hit)<ul>
+<li>&#x76F4;&#x5199;(write-through)&#xFF1A;&#x7ACB;&#x5373;&#x5C06;w&#x7684;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5757;&#x5199;&#x56DE;&#x5230;&#x7D27;&#x63A5;&#x7740;&#x7684;&#x4F4E;&#x4E00;&#x5C42;&#x4E2D;</li>
+<li>&#x5199;&#x56DE;(write-back)&#xFF1A;&#x5C3D;&#x53EF;&#x80FD;&#x63A8;&#x8FDF;&#x66F4;&#x65B0;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x66FF;&#x6362;&#x7B97;&#x6CD5;&#x8981;&#x9A71;&#x9010;&#x8FD9;&#x4E2A;&#x66F4;&#x65B0;&#x8FC7;&#x7684;&#x5757;&#x65F6;&#xFF0C;&#x624D;&#x628A;&#x5B83;&#x5199;&#x56DE;&#x5230;&#x7D27;&#x63A5;&#x7740;&#x7684;&#x4F4E;&#x4E00;&#x5C42;&#x4E2D;&#x3002;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x884C;&#x5FC5;&#x987B;&#x4E3A;&#x6BCF;&#x4E2A;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x884C;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x4FEE;&#x6539;&#x4F4D;(dirty bit)&#xFF0C;&#x8868;&#x660E;&#x8FD9;&#x4E2A;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x884C;&#x662F;&#x5426;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;&#x3002;</li>
+</ul>
+</li>
+<li>&#x5199;&#x4E0D;&#x547D;&#x4E2D;<ul>
+<li>&#x5199;&#x5206;&#x914D;(write-allocate)&#xFF1A;&#x52A0;&#x8F7D;&#x76F8;&#x5E94;&#x7684;&#x4F4E;&#x4E00;&#x5C42;&#x4E2D;&#x7684;&#x5757;&#x5230;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x8FD9;&#x4E2A;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5757;</li>
+<li>&#x975E;&#x5199;&#x5206;&#x914D;(not-write-allocate)&#xFF1A;&#x907F;&#x5F00;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#xFF0C;&#x76F4;&#x63A5;&#x628A;&#x8FD9;&#x4E2A;&#x5B57;&#x5199;&#x5230;&#x4F4E;&#x4E00;&#x5C42;&#x4E2D;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x53C2;&#x6570;&#x5BF9;&#x6027;&#x80FD;&#x5F71;&#x54CD;">&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x53C2;&#x6570;&#x5BF9;&#x6027;&#x80FD;&#x5F71;&#x54CD;</h3>
+<ul>
+<li>&#x4E0D;&#x547D;&#x4E2D;&#x7387;/&#x547D;&#x4E2D;&#x7387;(miss/hit rate): &#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5185;&#x5B58;&#x5F15;&#x7528;&#x4E0D;&#x547D;&#x4E2D;/&#x547D;&#x4E2D;&#x7684;&#x6BD4;&#x7387;</li>
+<li>&#x547D;&#x4E2D;&#x65F6;&#x95F4;(hit time): &#x4ECE;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x4F20;&#x9001;&#x4E00;&#x4E2A;&#x5B57;&#x5230;CPU&#x6240;&#x9700;&#x65F6;&#x95F4;&#xFF0C;&#x5305;&#x62EC;&#x7EC4;&#x9009;&#x62E9;&#x3001;&#x884C;&#x786E;&#x8BA4;&#x3001;&#x5B57;&#x9009;&#x62E9;&#x65F6;&#x95F4;&#x3002;L1&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5728;&#x51E0;&#x4E2A;&#x65F6;&#x949F;&#x5468;&#x671F;</li>
+<li>&#x4E0D;&#x547D;&#x4E2D;&#x5904;&#x7F5A;(miss penalty): &#x4E0D;&#x547D;&#x4E2D;&#x6240;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x65F6;&#x95F4;&#xFF0C;L1&#x4E0D;&#x547D;&#x4E2D;&#x4ECE;L2&#x5F97;&#x5230;&#x670D;&#x52A1;&#x7684;&#x5904;&#x7F5A;&#x6570;&#x5341;&#x4E2A;&#x5468;&#x671F;&#xFF0C;&#x4ECE;L3&#x5F97;&#x5230;&#x670D;&#x52A1;&#x7684;&#x5904;&#x7F5A;50&#x4E2A;&#x5468;&#x671F;&#xFF0C;&#x4ECE;&#x4E3B;&#x5B58;&#x5F97;&#x5230;&#x670D;&#x52A1;&#x7684;&#x5904;&#x7F5A;200&#x4E2A;&#x5468;&#x671F;</li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019-2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2021-12-06 21:59:54
+2022-01-09 13:32:32
 </span></footer>
                                 
                                 </section>
@@ -889,12 +930,12 @@
 
             
                 
-                <a href="../第二章信息的表示和处理/1-整数的运算.html" class="navigation navigation-prev " aria-label="Previous page: 1. 整数的运算">
+                <a href="chapter6.html" class="navigation navigation-prev " aria-label="Previous page: 第六章 存储器层次结构">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="1-操作数.html" class="navigation navigation-next " aria-label="Next page: 1. 操作数(operand)">
+                <a href="../../computer_networking/computer_net.html" class="navigation navigation-next " aria-label="Next page: 计算机网络">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -905,7 +946,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第三章 程序的机器级表示","level":"1.2.1.3","depth":3,"next":{"title":"1. 操作数(operand)","level":"1.2.1.3.1","depth":4,"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","ref":"computer_system/深入理解计算机系统/第三章程序的机器级表示/1-操作数.md","articles":[]},"previous":{"title":"1. 整数的运算","level":"1.2.1.2.1","depth":4,"path":"computer_system/深入理解计算机系统/第二章信息的表示和处理/1-整数的运算.md","ref":"computer_system/深入理解计算机系统/第二章信息的表示和处理/1-整数的运算.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2021","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/深入理解计算机系统/第三章程序的机器级表示/chapter3.md","mtime":"2021-12-06T13:59:54.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T05:33:26.101Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1. 高速缓存","level":"1.2.1.6.1","depth":4,"next":{"title":"计算机网络","level":"1.2.2","depth":2,"path":"computer_system/computer_networking/computer_net.md","ref":"computer_system/computer_networking/computer_net.md","articles":[{"title":"云计算网络","level":"1.2.2.1","depth":3,"path":"computer_system/computer_networking/cloud_networking/cloud_net.md","ref":"computer_system/computer_networking/cloud_networking/cloud_net.md","articles":[{"title":"VIRTIO/VHOST","level":"1.2.2.1.1","depth":4,"path":"computer_system/computer_networking/cloud_networking/virtio/virtio.md","ref":"computer_system/computer_networking/cloud_networking/virtio/virtio.md","articles":[{"title":"VIRTIO/VHOST实验环境搭建","level":"1.2.2.1.1.1","depth":5,"path":"computer_system/computer_networking/cloud_networking/virtio/virtio_env.md","ref":"computer_system/computer_networking/cloud_networking/virtio/virtio_env.md","articles":[]},{"title":"VIRTIO/VHOST问题定位","level":"1.2.2.1.1.2","depth":5,"path":"computer_system/computer_networking/cloud_networking/virtio/virtio_qa.md","ref":"computer_system/computer_networking/cloud_networking/virtio/virtio_qa.md","articles":[]}]},{"title":"SmartNIC","level":"1.2.2.1.2","depth":4,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC.md","articles":[{"title":"SmartNIC硬件卸载","level":"1.2.2.1.2.1","depth":5,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC_offload.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC_offload.md","articles":[]},{"title":"virtio-net收发报文分析","level":"1.2.2.1.2.2","depth":5,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/virtio-net.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/virtio-net.md","articles":[]},{"title":"vhost实现分析","level":"1.2.2.1.2.3","depth":5,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/vhost.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/vhost.md","articles":[]}]}]}]},"previous":{"title":"第六章 存储器层次结构","level":"1.2.1.6","depth":3,"path":"computer_system/深入理解计算机系统/第六章存储器层次结构/chapter6.md","ref":"computer_system/深入理解计算机系统/第六章存储器层次结构/chapter6.md","articles":[{"title":"1. 高速缓存","level":"1.2.1.6.1","depth":4,"path":"computer_system/深入理解计算机系统/第六章存储器层次结构/1-高速缓存.md","ref":"computer_system/深入理解计算机系统/第六章存储器层次结构/1-高速缓存.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2021","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/深入理解计算机系统/第六章存储器层次结构/1-高速缓存.md","mtime":"2022-01-09T05:32:32.827Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T05:33:26.101Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
