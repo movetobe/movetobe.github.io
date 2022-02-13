@@ -1356,14 +1356,71 @@
                                 
                                 <h2 id="&#x300A;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6570;&#x5B66;1&#x300B;--&#x7ED3;&#x57CE;&#x6D69;">&#x300A;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6570;&#x5B66;1&#x300B; -&#x7ED3;&#x57CE;&#x6D69;</h2>
 <h2 id="&#x300A;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6570;&#x5B66;2&#x300B;--&#x7ED3;&#x57CE;&#x6D69;">&#x300A;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x6570;&#x5B66;2&#x300B; -&#x7ED3;&#x57CE;&#x6D69;</h2>
+<h3 id="1-&#x6761;&#x4EF6;&#x6982;&#x7387;">1. &#x6761;&#x4EF6;&#x6982;&#x7387;</h3>
 <ul>
-<li>&#x6761;&#x4EF6;&#x6982;&#x7387;&#x9762;&#x79EF;&#x89E3;&#x91CA;&#xFF1A;P(Y=b|X=a) = P(Y=b, X=a)/P(X=a)&#xFF0C;a&#x4E2D;b&#x7684;&#x6BD4;&#x4F8B;(given a, b&apos;s percent) = a&#x4E2D;b&#x7684;&#x9762;&#x79EF;(&#x8054;&#x5408;&#x6982;&#x7387;) / a&#x7684;&#x603B;&#x9762;&#x79EF;(&#x8FB9;&#x7F18;&#x6982;&#x7387;)</li>
-<li>&#x6761;&#x4EF6;&#x6982;&#x7387;&#x663E;&#x7136;&#x7ED3;&#x8BBA;&#xFF1A;P(Y=b0|X=a)+P(Y=b1|X=a)+...+P(Y=bn|X=a) = 1&#xFF0C;b0...bn&#x662F;&#x6240;&#x6709;Y&#x7684;&#x53D6;&#x503C;</li>
-<li>&#x8D1D;&#x53F6;&#x65AF;&#x4F5C;&#x56FE;&#xFF1A;&#x628A;&#x603B;&#x6982;&#x7387;&#x753B;&#x6210;&#x8FB9;&#x957F;&#x4E3A;1&#x7684;&#x6B63;&#x65B9;&#x5F62;&#xFF0C;&#x628A;&#x5404;&#x79CD;&#x5DF2;&#x77E5;&#x6761;&#x4EF6;&#x8F6C;&#x5316;&#x4E3A;&#x9762;&#x79EF;&#x753B;&#x5728;&#x56FE;&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x9762;&#x79EF;&#x6C42;&#x89E3;&#x95EE;&#x9898;</li>
-<li>&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;&#xFF1A; </li>
+<li><p>&#x6761;&#x4EF6;&#x6982;&#x7387;&#x9762;&#x79EF;&#x89E3;&#x91CA;&#xFF1A;P(Y=b|X=a) = P(Y=b, X=a)/P(X=a)&#xFF0C;a&#x4E2D;b&#x7684;&#x6BD4;&#x4F8B;(given a, b&apos;s percent) = a&#x4E2D;b&#x7684;&#x9762;&#x79EF;(&#x8054;&#x5408;&#x6982;&#x7387;) / a&#x7684;&#x603B;&#x9762;&#x79EF;(&#x8FB9;&#x7F18;&#x6982;&#x7387;)</p>
+</li>
+<li><p>&#x6761;&#x4EF6;&#x6982;&#x7387;&#x663E;&#x7136;&#x7ED3;&#x8BBA;&#xFF1A;P(Y=b0|X=a)+P(Y=b1|X=a)+...+P(Y=bn|X=a) = 1&#xFF0C;b0...bn&#x662F;&#x6240;&#x6709;Y&#x7684;&#x53D6;&#x503C;</p>
+</li>
+<li><p>&#x8D1D;&#x53F6;&#x65AF;&#x4F5C;&#x56FE;&#xFF1A;&#x628A;&#x603B;&#x6982;&#x7387;&#x753B;&#x6210;&#x8FB9;&#x957F;&#x4E3A;1&#x7684;&#x6B63;&#x65B9;&#x5F62;&#xFF0C;&#x628A;&#x5404;&#x79CD;&#x5DF2;&#x77E5;&#x6761;&#x4EF6;&#x8F6C;&#x5316;&#x4E3A;&#x9762;&#x79EF;&#x753B;&#x5728;&#x56FE;&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x9762;&#x79EF;&#x6C42;&#x89E3;&#x95EE;&#x9898;</p>
+</li>
+<li><p>&#x8D1D;&#x53F6;&#x65AF;&#x516C;&#x5F0F;&#xFF1A;P(Y=b|X=a) = P(Y=b, X=a)/P(X=a) = P(X=a, Y=b)/P(X=a)</p>
+<pre><code>                 = P(X=a|Y=b) * P(Y=b)/(P(Y=b0, X=a) + ... + P(Y=bn, X=a))
+</code></pre></li>
+<li><p>&#x4E8B;&#x4EF6;&#x72EC;&#x7ACB;&#x6027;&#xFF1A;X=a&#x4E0E;Y=b&#x72EC;&#x7ACB; -&gt; P(X=a, Y=b) = P(X=a) * P(Y=b)</p>
+</li>
 </ul>
+<h3 id="2-&#x6392;&#x5217;&#x7EC4;&#x5408;">2. &#x6392;&#x5217;&#x7EC4;&#x5408;</h3>
+<ul>
+<li><p>&#x6392;&#x5217;(Permutation)&#xFF1A;&#x4ECE;n&#x4E2A;&#x4EBA;&#x4E2D;&#x9009;&#x51FA;k&#x4EBA;&#x6392;&#x6210;&#x4E00;&#x5217;&#xFF0C;A(n, k) = n! / (n - k)!</p>
+</li>
+<li><p>&#x7EC4;&#x5408;(Combination)&#xFF1A;&#x4ECE;n&#x4E2A;&#x4EBA;&#x4E2D;&#x9009;&#x51FA;k&#x4EBA;&#x6392;&#x6210;&#x4E00;&#x5217;&#xFF0C;&#x4E0D;&#x5173;&#x5FC3;&#x987A;&#x5E8F;&#xFF0C;C(n, k) = A(n, k)/k! = n! / ((n - k)! * k!)</p>
+</li>
+</ul>
+<h3 id="3-&#x671F;&#x671B;&#x65B9;&#x5DEE;">3. &#x671F;&#x671B;/&#x65B9;&#x5DEE;</h3>
+<ul>
+<li><p>&#x671F;&#x671B;&#x503C;(Expectation)&#xFF1A;&#x671F;&#x671B;&#x503C;&#x7406;&#x89E3;&#x4E3A;&#x4F53;&#x79EF;&#xFF0C;&#x9AD8;&#x5EA6;&#x5373;&#x503C;k, &#x9762;&#x79EF;&#x5373;P[X=k], E[X] = k0 <em> P[X=k0] + ... + kn </em> P[X=kn]; E[X + c] = E[X] + c; cE[X] = c * E[X]; E[X + Y] = E[X] + E[Y]</p>
+</li>
+<li><p>&#x65B9;&#x5DEE;(Variance)&#xFF1A;V[X] = E[(X - u)^2], u = E[X]; V[X + c] = V[X]; V[c <em> X] = c^2 </em> V[X]</p>
+</li>
+<li><p>&#x6807;&#x51C6;&#x5DEE;(Standard deviation)&#xFF1A;S[X]^2 = V[X]</p>
+</li>
+<li><p>V[X] = E[X^2] - E[X]^2</p>
+</li>
+<li><p>&#x6761;&#x4EF6;&#x65B9;&#x5DEE;&#xFF1A;V[Y|X=a] = E[(Y-u(a))^2 | X=a], u(a) = E[Y|X=a]</p>
+</li>
+</ul>
+<h3 id="4-&#x8FDE;&#x7EED;&#x503C;&#x6982;&#x7387;">4. &#x8FDE;&#x7EED;&#x503C;&#x6982;&#x7387;</h3>
+<ul>
+<li><p>&#x5FAE;&#x5206;&#xFF1A;&#x4E66;&#x4E2D;&#x4EE5;f(x)&#x8868;&#x793A;&#x6253;&#x5370;&#x6CB9;&#x58A8;&#x7684;&#x5BC6;&#x5EA6;&#xFF0C;F(x)&#x8868;&#x793A;&#x6253;&#x5370;&#x6CB9;&#x58A8;&#x7684;&#x4F7F;&#x7528;&#x91CF;&#xFF0C;x&#x8868;&#x793A;&#x6253;&#x5370;&#x6CB9;&#x58A8;&#x7684;&#x957F;&#x5EA6;&#xFF0C;f(x) = dF(x)/dx</p>
+</li>
+<li><p>&#x79EF;&#x5206;&#xFF1A;$\int_a^bf(x)dx = F(b) - F(a)$</p>
+</li>
+<li><p>&#x8FDE;&#x7EED;&#x503C;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#xFF1A;f(X=x) = dF(X=x)/dx, F(X=a) = P(X&lt;a)&#x5373;&#x76F4;&#x5230;a&#x5904;&#x7684;&#x6982;&#x7387;&#x4E4B;&#x548C;&#xFF0C;f(X=x)&#x7684;&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x8868;&#x793A;x&#x9644;&#x8FD1;&#x7684;&#x6982;&#x7387;&#x8D8A;&#x6D53;&#xFF0C;x&#x9644;&#x8FD1;&#x7684;&#x503C;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x8D8A;&#x5927;&#x3002;&#x56E0;&#x6B64;&#xFF0C;$P(a&lt;x&lt;b) = \int_a^bf(x)dx$</p>
+</li>
+<li><p>&#x5747;&#x5300;&#x5206;&#x5E03;&#xFF0C; f(x) = 1/(b - a)</p>
+</li>
+<li><p>&#x8054;&#x5408;&#x5206;&#x5E03;&#xFF1A;
+<img src="union-distribution.png" align="center"></p>
+</li>
+<li><p>&#x79BB;&#x6563;&#x6982;&#x7387; vs &#x8FDE;&#x7EED;&#x6982;&#x7387;&#xFF1A;
+<img src="discrete-continuity.png" align="center/"></p>
+</li>
+<li><p>&#x6B63;&#x6001;&#x5206;&#x5E03;/&#x4E2D;&#x5FC3;&#x6781;&#x9650;&#x5B9A;&#x7406;</p>
+</li>
+</ul>
+<h3 id="5-&#x534F;&#x65B9;&#x5DEE;&#x591A;&#x5143;&#x6B63;&#x6001;&#x5206;&#x5E03;">5. &#x534F;&#x65B9;&#x5DEE;/&#x591A;&#x5143;&#x6B63;&#x6001;&#x5206;&#x5E03;</h3>
+<ul>
+<li><p>&#x534F;&#x65B9;&#x5DEE;(Covariance)&#xFF1A;Cov(X, Y) = E[(X-u)(Y-v)], u = E[X], v = E[Y]&#xFF0C;&#x8868;&#x660E;X&#x4E0E;Y&#x7684;&#x76F8;&#x5173;&#x6027;</p>
+</li>
+<li><p>&#x591A;&#x5143;&#x6B63;&#x6001;&#x5206;&#x5E03;</p>
+</li>
+<li><p>&#x5361;&#x65B9;&#x5206;&#x5E03;</p>
+</li>
+</ul>
+<h3 id="6-&#x4F30;&#x8BA1;&#x4E0E;&#x68C0;&#x9A8C;">6. &#x4F30;&#x8BA1;&#x4E0E;&#x68C0;&#x9A8C;</h3>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019-2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2022-02-13 15:24:03
+2022-02-13 22:43:37
 </span></footer>
                                 
                                 </section>
@@ -1403,7 +1460,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"程序员的数学","level":"1.3.4.3","depth":3,"previous":{"title":"深入理解计算机系统","level":"1.3.4.2","depth":3,"path":"computer_system/深入理解计算机系统/深入理解计算机系统.md","ref":"computer_system/深入理解计算机系统/深入理解计算机系统.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"readings/科学/程序员的数学.md","mtime":"2022-02-13T07:24:03.177Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-13T07:35:29.407Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"程序员的数学","level":"1.3.4.3","depth":3,"previous":{"title":"深入理解计算机系统","level":"1.3.4.2","depth":3,"path":"computer_system/深入理解计算机系统/深入理解计算机系统.md","ref":"computer_system/深入理解计算机系统/深入理解计算机系统.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"readings/科学/程序员的数学.md","mtime":"2022-02-13T14:43:37.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-13T14:44:27.322Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
