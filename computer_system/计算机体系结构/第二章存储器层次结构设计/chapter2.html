@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>每周一赛-179-week · System</title>
+        <title>第二章 存储器层次结构设计 · System</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../../readings/readings.html" />
+    <link rel="next" href="../../computer_networking/computer_net.html" />
     
     
-    <link rel="prev" href="../leetcode_everyday/202003.html" />
+    <link rel="prev" href="../第一章量化设计与分析基础/chapter1.html" />
     
 
     </head>
@@ -324,9 +324,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../../计算机体系结构/计算机体系结构.html">
+        <li class="chapter " data-level="1.2.2" data-path="../计算机体系结构.html">
             
-                <a href="../../计算机体系结构/计算机体系结构.html">
+                <a href="../计算机体系结构.html">
             
                     
                     计算机体系结构
@@ -338,9 +338,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="../../计算机体系结构/第一章量化设计与分析基础/chapter1.html">
+        <li class="chapter " data-level="1.2.2.1" data-path="../第一章量化设计与分析基础/chapter1.html">
             
-                <a href="../../计算机体系结构/第一章量化设计与分析基础/chapter1.html">
+                <a href="../第一章量化设计与分析基础/chapter1.html">
             
                     
                     第一章 量化设计与分析基础
@@ -351,9 +351,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2.2" data-path="../../计算机体系结构/第二章存储器层次结构设计/chapter2.html">
+        <li class="chapter active" data-level="1.2.2.2" data-path="chapter2.html">
             
-                <a href="../../计算机体系结构/第二章存储器层次结构设计/chapter2.html">
+                <a href="chapter2.html">
             
                     
                     第二章 存储器层次结构设计
@@ -671,9 +671,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="../leetcode.html">
+        <li class="chapter " data-level="1.2.6" data-path="../../leetcode/leetcode.html">
             
-                <a href="../leetcode.html">
+                <a href="../../leetcode/leetcode.html">
             
                     
                     leetcode
@@ -685,9 +685,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.6.1" data-path="../leetcode_everyday/202003.html">
+        <li class="chapter " data-level="1.2.6.1" data-path="../../leetcode/leetcode_everyday/202003.html">
             
-                <a href="../leetcode_everyday/202003.html">
+                <a href="../../leetcode/leetcode_everyday/202003.html">
             
                     
                     每日一题-2020/03
@@ -698,9 +698,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6.2" data-path="leetcode_179_week.html">
+        <li class="chapter " data-level="1.2.6.2" data-path="../../leetcode/leetcode_week/leetcode_179_week.html">
             
-                <a href="leetcode_179_week.html">
+                <a href="../../leetcode/leetcode_week/leetcode_179_week.html">
             
                     
                     每周一赛-179-week
@@ -1027,9 +1027,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4.5" data-path="../../计算机体系结构/计算机体系结构.html">
+        <li class="chapter " data-level="1.3.4.5" data-path="../计算机体系结构.html">
             
-                <a href="../../计算机体系结构/计算机体系结构.html">
+                <a href="../计算机体系结构.html">
             
                     
                     计算机体系结构
@@ -1080,7 +1080,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >每周一赛-179-week</a>
+        <a href="../../.." >第二章 存储器层次结构设计</a>
     </h1>
 </div>
 
@@ -1095,183 +1095,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="leetcode-5354-&#x901A;&#x77E5;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x6240;&#x9700;&#x7684;&#x65F6;&#x95F4;"><em><a href="https://leetcode-cn.com/problems/time-needed-to-inform-all-employees/" target="_blank">[leetcode-5354. &#x901A;&#x77E5;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x6240;&#x9700;&#x7684;&#x65F6;&#x95F4;]</a></em></h3>
-<p><em>&#x516C;&#x53F8;&#x91CC;&#x6709; n &#x540D;&#x5458;&#x5DE5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5458;&#x5DE5;&#x7684; ID &#x90FD;&#x662F;&#x72EC;&#x4E00;&#x65E0;&#x4E8C;&#x7684;&#xFF0C;&#x7F16;&#x53F7;&#x4ECE; 0 &#x5230; n - 1&#x3002;&#x516C;&#x53F8;&#x7684;&#x603B;&#x8D1F;&#x8D23;&#x4EBA;&#x901A;&#x8FC7; headID &#x8FDB;&#x884C;&#x6807;&#x8BC6;&#x3002;<br>&#x5728; manager &#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5458;&#x5DE5;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x76F4;&#x5C5E;&#x8D1F;&#x8D23;&#x4EBA;&#xFF0C;&#x5176;&#x4E2D; manager[i] &#x662F;&#x7B2C; i &#x540D;&#x5458;&#x5DE5;&#x7684;&#x76F4;&#x5C5E;&#x8D1F;&#x8D23;&#x4EBA;&#x3002;&#x5BF9;&#x4E8E;&#x603B;&#x8D1F;&#x8D23;&#x4EBA;&#xFF0C;manager[headID] = -1&#x3002;&#x9898;&#x76EE;&#x4FDD;&#x8BC1;&#x4ECE;&#x5C5E;&#x5173;&#x7CFB;&#x53EF;&#x4EE5;&#x7528;&#x6811;&#x7ED3;&#x6784;&#x663E;&#x793A;&#x3002;<br>&#x516C;&#x53F8;&#x603B;&#x8D1F;&#x8D23;&#x4EBA;&#x60F3;&#x8981;&#x5411;&#x516C;&#x53F8;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x901A;&#x544A;&#x4E00;&#x6761;&#x7D27;&#x6025;&#x6D88;&#x606F;&#x3002;&#x4ED6;&#x5C06;&#x4F1A;&#x9996;&#x5148;&#x901A;&#x77E5;&#x4ED6;&#x7684;&#x76F4;&#x5C5E;&#x4E0B;&#x5C5E;&#x4EEC;&#xFF0C;&#x7136;&#x540E;&#x7531;&#x8FD9;&#x4E9B;&#x4E0B;&#x5C5E;&#x901A;&#x77E5;&#x4ED6;&#x4EEC;&#x7684;&#x4E0B;&#x5C5E;&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7684;&#x5458;&#x5DE5;&#x90FD;&#x5F97;&#x77E5;&#x8FD9;&#x6761;&#x7D27;&#x6025;&#x6D88;&#x606F;&#x3002;<br>&#x7B2C; i &#x540D;&#x5458;&#x5DE5;&#x9700;&#x8981; informTime[i] &#x5206;&#x949F;&#x6765;&#x901A;&#x77E5;&#x5B83;&#x7684;&#x6240;&#x6709;&#x76F4;&#x5C5E;&#x4E0B;&#x5C5E;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728; informTime[i] &#x5206;&#x949F;&#x540E;&#xFF0C;&#x4ED6;&#x7684;&#x6240;&#x6709;&#x76F4;&#x5C5E;&#x4E0B;&#x5C5E;&#x90FD;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x4F20;&#x64AD;&#x8FD9;&#x4E00;&#x6D88;&#x606F;&#xFF09;&#x3002;<br>&#x8FD4;&#x56DE;&#x901A;&#x77E5;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x8FD9;&#x4E00;&#x7D27;&#x6025;&#x6D88;&#x606F;&#x6240;&#x9700;&#x8981;&#x7684;&#x5206;&#x949F;&#x6570; &#x3002;<br>&#x5982;&#x679C;&#x5458;&#x5DE5; i &#x6CA1;&#x6709;&#x4E0B;&#x5C5E;&#xFF0C;informTime[i] == 0 &#x3002;</em></p>
-<p>&#x601D;&#x8DEF;&#x4E0A;&#x6BD4;&#x8F83;&#x5E38;&#x89C4;&#xFF0C;&#x91C7;&#x7528;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF0C;&#x641C;&#x7D22;&#x51FA;&#x5177;&#x6709;&#x6700;&#x5927;&#x901A;&#x77E5;&#x65F6;&#x95F4;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5373;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x88AB;&#x901A;&#x77E5;&#x5230;&#x7684;&#x6700;&#x5927;&#x65F6;&#x95F4;&#x3002;</p>
-<p>&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#x91C7;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#xFF0C;&#x6BCF;&#x6B21;&#x5230;&#x5458;&#x5DE5;i&#x65F6;&#xFF0C;&#x9012;&#x5F52;&#x901A;&#x77E5;&#x5176;&#x6240;&#x6709;&#x4E0B;&#x5C5E;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x4F18;&#x5316;&#x70B9;&#xFF0C;&#x5982;&#x4F55;&#x6700;&#x5FEB;&#x7684;&#x65F6;&#x95F4;&#x627E;&#x5230;&#x5176;&#x6240;&#x6709;&#x4E0B;&#x5C5E;&#xFF1F;</p>
+                                <h2 id="&#x7B2C;&#x4E8C;&#x7AE0;-&#x5B58;&#x50A8;&#x5668;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;">&#x7B2C;&#x4E8C;&#x7AE0; &#x5B58;&#x50A8;&#x5668;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;</h2>
+<h3 id="&#x591A;&#x7EA7;&#x5B58;&#x50A8;&#x5668;&#x5C42;&#x6B21;&#x7ED3;&#x6784;">&#x591A;&#x7EA7;&#x5B58;&#x50A8;&#x5668;&#x5C42;&#x6B21;&#x7ED3;&#x6784;</h3>
+<ul>
+<li><p>&#x5178;&#x578B;&#x670D;&#x52A1;&#x5668;&#x591A;&#x7EA7;&#x5B58;&#x50A8;&#x5668;&#x5BB9;&#x91CF;&#x548C;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;(2012&#x5E74;)</p>
+<ul>
+<li>CPU&#x5BC4;&#x5B58;&#x5668;: 1KB/300ps</li>
+<li>L1 cache: 64KB/1ns</li>
+<li>L2 cache: 256KB/3-10ns</li>
+<li>L3 cache: 2-4MB/10-20ns</li>
+<li>(&#x5B58;&#x50A8;&#x5668;&#x603B;&#x7EBF;)&#x5185;&#x5B58;: 4-16GB/50-100ns</li>
+<li>(IO&#x603B;&#x7EBF;)&#x78C1;&#x76D8;: 4-16TB/5-10ms</li>
+</ul>
+</li>
+<li><p>&#x5178;&#x578B;&#x4E2A;&#x4EBA;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x591A;&#x7EA7;&#x5B58;&#x50A8;&#x5668;&#x5BB9;&#x91CF;&#x548C;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;(2012&#x5E74;)</p>
+<ul>
+<li>CPU&#x5BC4;&#x5B58;&#x5668;: 0.5KB/500ps</li>
+<li>L1 cache: 64KB/2ns</li>
+<li>L2 cache: 256KB/10-20ns</li>
+<li>(&#x5B58;&#x50A8;&#x5668;&#x603B;&#x7EBF;)&#x5185;&#x5B58;: 256-512MB/50-100ns</li>
+<li>&#x78C1;&#x76D8;: 4-16TB/25-50us</li>
+</ul>
+</li>
+<li><p><a href="../../&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;/&#x7B2C;&#x516D;&#x7AE0;&#x5B58;&#x50A8;&#x5668;&#x5C42;&#x6B21;&#x7ED3;&#x6784;/chapter6.html">&#x7F13;&#x5B58;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;&#x4E0E;&#x5206;&#x7C7B;</a></p>
+</li>
+<li><p>&#x7F13;&#x5B58;&#x7F3A;&#x5931;&#x573A;&#x666F;&#xFF1A;</p>
+<ul>
+<li>&#x5F3A;&#x5236;(Compulsory): &#x5F3A;&#x5236;&#x7F3A;&#x5931;&#xFF0C;&#x5982;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x8BBF;&#x95EE;&#xFF0C;&#x4E00;&#x5B9A;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x8C03;&#x5165;&#x7F13;&#x5B58;&#x4E2D;&#x3002;</li>
+<li>&#x5BB9;&#x91CF;(Capacity): &#x5BB9;&#x91CF;&#x7F3A;&#x5931;&#xFF0C;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x6240;&#x9700;&#x8981;&#x7684;&#x5168;&#x90E8;&#x5757;&#xFF0C;&#x4E00;&#x5B9A;&#x4F1A;&#x53D1;&#x751F;&#x6709;&#x4E9B;&#x5757;&#x88AB;&#x653E;&#x5F03;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x88AB;&#x8C03;&#x5165;&#x3002;</li>
+<li>&#x51B2;&#x7A81;(Conflict): &#x51B2;&#x7A81;&#x7F3A;&#x5931;&#xFF0C;&#x5982;&#x679C;&#x5757;&#x653E;&#x7F6E;&#x7B56;&#x7565;&#x4E0D;&#x662F;&#x5168;&#x76F8;&#x8054;&#xFF0C;&#x4E00;&#x5B9A;&#x4F1A;&#x53D1;&#x751F;&#x591A;&#x4E2A;&#x5757;&#x6620;&#x5C04;&#x5230;&#x4E00;&#x4E2A;&#x7EC4;&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x5757;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x653E;&#x5F03;&#x518D;&#x8C03;&#x5165;&#x3002;</li>
+<li>&#x4E00;&#x81F4;&#x6027;(Coherency): &#x4E00;&#x81F4;&#x6027;&#x7F3A;&#x5931;&#xFF0C;&#x591A;&#x5904;&#x7406;&#x5668;&#x591A;&#x7F13;&#x5B58;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x7F13;&#x5B58;&#x5237;&#x65B0;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x5B58;&#x50A8;&#x5668;&#x5E73;&#x5747;&#x8BBF;&#x95EE;&#x65F6;&#x95F4; = &#x547D;&#x4E2D;&#x65F6;&#x95F4; + &#x7F3A;&#x5931;&#x7387; * &#x7F3A;&#x5931;&#x4EE3;&#x4EF7;</p>
+</li>
+</ul>
+<h3 id="&#x7F13;&#x5B58;&#x4F18;&#x5316;&#x65B9;&#x6CD5;">&#x7F13;&#x5B58;&#x4F18;&#x5316;&#x65B9;&#x6CD5;</h3>
+<h4 id="6&#x79CD;&#x57FA;&#x672C;&#x7684;&#x7F13;&#x5B58;&#x4F18;&#x5316;&#x65B9;&#x6CD5;">6&#x79CD;&#x57FA;&#x672C;&#x7684;&#x7F13;&#x5B58;&#x4F18;&#x5316;&#x65B9;&#x6CD5;</h4>
+<ul>
+<li>&#x589E;&#x5927;&#x5757;&#x4EE5;&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x7387;&#xFF1A;&#x5229;&#x7528;&#x7A7A;&#x95F4;&#x5C40;&#x90E8;&#x6027;&#xFF0C;&#x589E;&#x5927;&#x5757;&#x4EE5;&#x51CF;&#x5C11;&#x5F3A;&#x5236;&#x7F3A;&#x5931;&#xFF0C;&#x4F46;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x7F3A;&#x5931;&#x4EE3;&#x4EF7;&#xFF0C;&#x53EF;&#x80FD;&#x589E;&#x5927;&#x5BB9;&#x91CF;&#x7F3A;&#x5931;&#x6216;&#x8005;&#x51B2;&#x7A81;&#x7F3A;&#x5931;</li>
+<li>&#x589E;&#x5927;&#x7F13;&#x5B58;&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x7387;&#xFF1A;&#x51CF;&#x5C11;&#x5BB9;&#x91CF;&#x7F3A;&#x5931;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x4F1A;&#x5EF6;&#x957F;&#x547D;&#x4E2D;&#x65F6;&#x95F4;</li>
+<li>&#x63D0;&#x9AD8;&#x76F8;&#x8054;&#x7A0B;&#x5EA6;&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x7387;&#xFF1A;&#x51CF;&#x5C11;&#x51B2;&#x7A81;&#x7F3A;&#x5931;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x4F1A;&#x5EF6;&#x957F;&#x547D;&#x4E2D;&#x65F6;&#x95F4;</li>
+<li>&#x591A;&#x7EA7;&#x7F13;&#x5B58;&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x4EE3;&#x4EF7;&#xFF1A;&#x52A0;&#x5FEB;&#x7F13;&#x5B58;&#x547D;&#x4E2D;&#x901F;&#x5EA6;&#xFF0C;&#x8DDF;&#x4E0A;&#x5904;&#x7406;&#x5668;&#x65F6;&#x949F;&#x9891;&#x7387;</li>
+<li>&#x4E3A;&#x8BFB;&#x53D6;&#x7F3A;&#x5931;&#x6307;&#x5B9A;&#x9AD8;&#x4E8E;&#x5199;&#x5165;&#x64CD;&#x4F5C;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x4EE5;&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x7387;</li>
+<li>&#x7F13;&#x5B58;&#x7D22;&#x5F15;&#x907F;&#x514D;&#x5730;&#x5740;&#x8F6C;&#x6362;&#xFF0C;&#x964D;&#x4F4E;&#x547D;&#x4E2D;&#x65F6;&#x95F4;</li>
+</ul>
+<h4 id="10&#x79CD;&#x7F13;&#x5B58;&#x6027;&#x80FD;&#x9AD8;&#x7EA7;&#x4F18;&#x5316;&#x65B9;&#x6CD5;">10&#x79CD;&#x7F13;&#x5B58;&#x6027;&#x80FD;&#x9AD8;&#x7EA7;&#x4F18;&#x5316;&#x65B9;&#x6CD5;</h4>
 <blockquote>
 <ul>
-<li>&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x6240;&#x6709;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5224;&#x65AD;&#x5B83;&#x7684;&#x4E0A;&#x53F8;&#x662F;&#x4E0D;&#x662F;i&#x5458;&#x5DE5;&#xFF1B;</li>
-<li>&#x4E8B;&#x5148;&#x505A;&#x597D;&#x4FDD;&#x5B58;&#x5458;&#x5DE5;i&#x7684;&#x6240;&#x6709;&#x4E0B;&#x5C5E;&#x7684;&#x5173;&#x7CFB;&#xFF1B;</li>
+<li>&#x7F29;&#x77ED;&#x547D;&#x4E2D;&#x65F6;&#x95F4;</li>
+<li>&#x589E;&#x52A0;&#x7F13;&#x5B58;&#x5E26;&#x5BBD;</li>
+<li>&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x4EE3;&#x4EF7;</li>
+<li>&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x7387;</li>
+<li>&#x901A;&#x8FC7;&#x5E76;&#x884C;&#x964D;&#x4F4E;&#x7F3A;&#x5931;&#x4EE3;&#x4EF7;&#x6216;&#x8005;&#x7F3A;&#x5931;&#x7387;</li>
 </ul>
 </blockquote>
-<p>&#x5BF9;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#xFF0C;&#x590D;&#x6742;&#x5EA6;&#x8F83;&#x9AD8;&#xFF0C;&#x4F1A;&#x8D85;&#x65F6;;<br>&#x5BF9;&#x4E8E;&#x7B2C;&#x4E8C;&#x4E2A;&#x9009;&#x62E9;&#xFF0C;&#x5982;C++/Java/Python&#x7B49;&#x8BED;&#x8A00;&#x90FD;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;C&#x8BED;&#x8A00;&#x6765;&#x8BF4;&#xFF0C;&#x4E0D;&#x5BB9;&#x6613;&#x5B9E;&#x73B0;&#x3002;&#x540C;&#x6837;&#x7684;&#x95EE;&#x9898;&#x4E5F;&#x4F1A;&#x51FA;&#x73B0;&#x5728; <em>[leetcode-582. &#x6740;&#x6B7B;&#x8FDB;&#x7A0B;]</em> &#x4E2D;&#x3002;
-&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x6709;&#x4E24;&#x79CD;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<h4 id="1-&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4E8B;&#x5148;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5458;&#x5DE5;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x4E0B;&#x5C5E;&#xFF0C;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x540E;&#xFF0C;&#x518D;&#x904D;&#x5386;&#x4FDD;&#x5B58;&#x4E0B;&#x5C5E;&#x4FE1;&#x606F;&#xFF1B;">1. &#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4E8B;&#x5148;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5458;&#x5DE5;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x4E0B;&#x5C5E;&#xFF0C;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x540E;&#xFF0C;&#x518D;&#x904D;&#x5386;&#x4FDD;&#x5B58;&#x4E0B;&#x5C5E;&#x4FE1;&#x606F;&#xFF1B;</h4>
-<pre><code>struct node {
-    int child_size;
-    int index;
-    int *childs;
-};
-int inform(int n, int headID, struct node *parents, int *inform_time)
-{
-    int i = 0;
-    int cost, max_cost = 0;
-
-    if (inform_time[headID] == 0) {
-        return 0;
-    }
-    for (i = 0; i &lt; parents[headID].child_size; i++) {
-        cost = inform(n, parents[headID].childs[i], parents, inform_time) + inform_time[headID];
-        max_cost = MAX(max_cost, cost);
-    }
-    return max_cost;
-}
-int numOfMinutes(int n, int headID, int* manager, int managerSize, int* informTime, int informTimeSize)
-{
-    int i;
-    int cost;
-    int index;
-    struct node *parents = calloc(1, sizeof(struct node) * n);
-
-    for (i = 0; i &lt; n; i++) {
-        if (i != headID) {
-            parents[manager[i]].child_size++;
-        }
-    }
-    for (i = 0; i &lt; n; i++) {
-        parents[i].childs = calloc(1, sizeof(int) * parents[i].child_size);
-    }
-    for (i = 0; i &lt; n; i++) {
-        if (i != headID) {
-            index = parents[manager[i]].index;
-            parents[manager[i]].childs[index] = i;
-            parents[manager[i]].index++;
-        }
-    }
-    cost = inform(n, headID, parents, informTime);
-    for (i = 0; i &lt; n; i++) {
-        free(parents[i].childs);
-    }
-    free(parents);
-    return cost;
-}
-</code></pre><h4 id="2-&#x7528;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x5458;&#x5DE5;i&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B69;&#x5B50;&#xFF0C;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x5458;&#x5DE5;i&#x7684;&#x4E0A;&#x4E00;&#x4E2A;&#x5144;&#x957F;&#x3002;">2. &#x7528;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x5458;&#x5DE5;i&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B69;&#x5B50;&#xFF0C;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x5458;&#x5DE5;i&#x7684;&#x4E0A;&#x4E00;&#x4E2A;&#x5144;&#x957F;&#x3002;</h4>
-<pre><code>int inform(int n, int headID, int *last_child, int *sibling, int *inform_time)
-{
-    int i = 0;
-    int cost, max_cost = 0;
-
-    if (inform_time[headID] == 0) {
-        return 0;
-    }
-    for (i = last_child[headID]; i &gt;= 0; i = sibling[i]) {
-        cost = inform(n, i, last_child, sibling, inform_time) + inform_time[headID];
-        max_cost = MAX(max_cost, cost);
-    }
-    return max_cost;
-}
-int numOfMinutes(int n, int headID, int* manager, int managerSize, int* informTime, int informTimeSize)
-{
-    int i;
-    int cost;
-    int *last_child = calloc(1, sizeof(int) * n);
-    int *sibling = calloc(1, sizeof(int) * n);
-
-    memset(last_child, -1, sizeof(int) * n);
-    for (i = 0; i &lt; n; i++) {
-        if (i != headID) {
-            sibling[i] = last_child[manager[i]];
-            last_child[manager[i]] = i;
-        }
-    }
-    cost = inform(n, headID, last_child, sibling, informTime);
-    free(last_child);
-    free(sibling);
-    return cost;
-}
-</code></pre><h3 id="leetcode-5355-t&#x79D2;&#x540E;&#x9752;&#x86D9;&#x7684;&#x4F4D;&#x7F6E;"><em><a href="https://leetcode-cn.com/problems/frog-position-after-t-seconds/" target="_blank">[leetcode-5355. T&#x79D2;&#x540E;&#x9752;&#x86D9;&#x7684;&#x4F4D;&#x7F6E;]</a></em></h3>
-<p><em>&#x7ED9;&#x4F60;&#x4E00;&#x68F5;&#x7531; n &#x4E2A;&#x9876;&#x70B9;&#x7EC4;&#x6210;&#x7684;&#x65E0;&#x5411;&#x6811;&#xFF0C;&#x9876;&#x70B9;&#x7F16;&#x53F7;&#x4ECE; 1 &#x5230; n&#x3002;&#x9752;&#x86D9;&#x4ECE; &#x9876;&#x70B9; 1 &#x5F00;&#x59CB;&#x8D77;&#x8DF3;&#x3002;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;<br>&#x5728;&#x4E00;&#x79D2;&#x5185;&#xFF0C;&#x9752;&#x86D9;&#x4ECE;&#x5B83;&#x6240;&#x5728;&#x7684;&#x5F53;&#x524D;&#x9876;&#x70B9;&#x8DF3;&#x5230;&#x53E6;&#x4E00;&#x4E2A; &#x672A;&#x8BBF;&#x95EE; &#x8FC7;&#x7684;&#x9876;&#x70B9;&#xFF08;&#x5982;&#x679C;&#x5B83;&#x4EEC;&#x76F4;&#x63A5;&#x76F8;&#x8FDE;&#xFF09;&#x3002;<br>&#x9752;&#x86D9;&#x65E0;&#x6CD5;&#x8DF3;&#x56DE;&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x9876;&#x70B9;&#x3002;<br>&#x5982;&#x679C;&#x9752;&#x86D9;&#x53EF;&#x4EE5;&#x8DF3;&#x5230;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x9876;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x8DF3;&#x5230;&#x5176;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x4E0A;&#x7684;&#x673A;&#x7387;&#x90FD;&#x76F8;&#x540C;&#x3002;<br>&#x5982;&#x679C;&#x9752;&#x86D9;&#x4E0D;&#x80FD;&#x8DF3;&#x5230;&#x4EFB;&#x4F55;&#x672A;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x9876;&#x70B9;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x6BCF;&#x6B21;&#x8DF3;&#x8DC3;&#x90FD;&#x4F1A;&#x505C;&#x7559;&#x5728;&#x539F;&#x5730;&#x3002;
-&#x65E0;&#x5411;&#x6811;&#x7684;&#x8FB9;&#x7528;&#x6570;&#x7EC4; edges &#x63CF;&#x8FF0;&#xFF0C;&#x5176;&#x4E2D; edges[i] = [fromi, toi] &#x610F;&#x5473;&#x7740;&#x5B58;&#x5728;&#x4E00;&#x6761;&#x76F4;&#x63A5;&#x8FDE;&#x901A; fromi &#x548C; toi &#x4E24;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x8FB9;&#x3002;<br>&#x8FD4;&#x56DE;&#x9752;&#x86D9;&#x5728; t &#x79D2;&#x540E;&#x4F4D;&#x4E8E;&#x76EE;&#x6807;&#x9876;&#x70B9; target &#x4E0A;&#x7684;&#x6982;&#x7387;&#x3002;</em></p>
-<p>&#x8DDF;&#x4E0A;&#x4E00;&#x9898;&#x5F88;&#x7C7B;&#x4F3C;&#xFF0C;&#x5C31;&#x662F;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF0C;&#x4F46;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x4E9B;&#x7EC6;&#x8282;&#xFF1A;</p>
-<blockquote>
 <ul>
-<li>&#x65E0;&#x5411;&#x6811;&#xFF0C;&#x6240;&#x6709;&#x76F8;&#x8FDE;&#x7684;&#x8282;&#x70B9;&#x90FD;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x5B69;&#x5B50;</li>
-<li>&#x5F00;&#x59CB;&#x8282;&#x70B9;&#x662F;1&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x5B83;&#x8DDF;-1&#x76F8;&#x8FDE;</li>
-<li>&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x53EA;&#x6709;&#x8DDF;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x76F8;&#x8FDE;</li>
-<li>&#x5982;&#x679C;&#x76EE;&#x6807;&#x70B9;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;t &gt;= 0&#x90FD;&#x53EF;&#x4EE5;</li>
-<li>&#x5982;&#x679C;&#x76EE;&#x6807;&#x70B9;&#x4E0D;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;t == 0&#x624D;&#x884C;</li>
+<li>&#x5C0F;&#x800C;&#x7B80;&#x5355;&#x7684;&#x7B2C;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#xFF0C;&#x7F29;&#x77ED;&#x547D;&#x4E2D;&#x65F6;&#x95F4;&#xFF0C;&#x964D;&#x4F4E;&#x529F;&#x8017; </li>
 </ul>
-</blockquote>
-<p>&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x6784;&#x5EFA;&#x7ED3;&#x6784;&#x4F53;&#x6765;&#x5B58;&#x50A8;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#xFF1A;</p>
-<pre><code>struct node {
-    int child_size;
-    int index;
-    int *childs;
-};
-double jump_success(struct node *parents, int from, int start, int t, int target)
-{
-    int i;
-    double possible = 0.0;
-
-    /* end */
-    if (t &lt; 0) {
-        return 0.0;
-    }
-    if ((t == 0) &amp;&amp; (start == target)) {
-        return 1.0;
-    }
-    /* leaf */
-    if (parents[start].child_size &lt;= 1) {
-        return (start == target ? 1.0 : 0.0);
-    }
-
-    /* options */
-    for (i = 0; i &lt; parents[start].child_size; i++) {
-        if (parents[start].childs[i] != from) {
-            possible += jump_success(parents, start, parents[start].childs[i], t - 1, target);
-        }
-    }
-    return possible / (parents[start].child_size - 1);
-}
-double frogPosition(int n, int** edges, int edgesSize, int* edgesColSize, int t, int target){
-    int i, j;
-    double possible = 0.0;
-    struct node *parents;
-    int index1, index2;
-    int begin = 1;
-
-    n  = n + 1;
-    parents = calloc(1, sizeof(struct node) * n);
-    for (i = 0; i &lt; edgesSize; i++) {
-        parents[edges[i][0]].child_size++;
-        parents[edges[i][1]].child_size++;
-    }
-    parents[begin].child_size++;
-    for (i = 0; i &lt; n; i++) {
-        parents[i].childs = calloc(1, sizeof(int) * parents[i].child_size);
-    }
-    for (i = 0; i &lt; edgesSize; i++) {
-        index1 = parents[edges[i][0]].index;
-        index2 = parents[edges[i][1]].index;
-        parents[edges[i][0]].childs[index1] = edges[i][1];
-        parents[edges[i][1]].childs[index2] = edges[i][0];
-        parents[edges[i][0]].index++;
-        parents[edges[i][1]].index++;
-    }
-    /* begin is from -1 */
-    parents[begin].childs[parents[begin].index] = -1;
-    parents[begin].index++;
-    possible = jump_success(parents, -1, begin, t, target);
-
-    for (i = 0; i &lt; n; i++) {
-        free(parents[i].childs);
-    }
-    free(parents);
-    return possible;
-}
-</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019-2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
-2020-03-09 00:01:52
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Jason 2019-2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x672C;&#x4E66;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF1A;
+2022-03-21 21:48:12
 </span></footer>
                                 
                                 </section>
@@ -1299,12 +1182,12 @@ double frogPosition(int n, int** edges, int edgesSize, int* edgesColSize, int t,
 
             
                 
-                <a href="../leetcode_everyday/202003.html" class="navigation navigation-prev " aria-label="Previous page: 每日一题-2020/03">
+                <a href="../第一章量化设计与分析基础/chapter1.html" class="navigation navigation-prev " aria-label="Previous page: 第一章 量化设计与分析基础">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../../readings/readings.html" class="navigation navigation-next " aria-label="Next page: 阅读">
+                <a href="../../computer_networking/computer_net.html" class="navigation navigation-next " aria-label="Next page: 计算机网络">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1315,7 +1198,7 @@ double frogPosition(int n, int** edges, int edgesSize, int* edgesColSize, int t,
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"每周一赛-179-week","level":"1.2.6.2","depth":3,"next":{"title":"阅读","level":"1.3","depth":1,"path":"readings/readings.md","ref":"readings/readings.md","articles":[{"title":"文学","level":"1.3.1","depth":2,"path":"readings/文学/reading.md","ref":"readings/文学/reading.md","articles":[{"title":"看见","level":"1.3.1.1","depth":3,"path":"readings/文学/看见.md","ref":"readings/文学/看见.md","articles":[]},{"title":"遥远的救世主","level":"1.3.1.2","depth":3,"path":"readings/文学/遥远的救世主.md","ref":"readings/文学/遥远的救世主.md","articles":[]},{"title":"家春秋","level":"1.3.1.3","depth":3,"path":"readings/文学/家春秋.md","ref":"readings/文学/家春秋.md","articles":[]},{"title":"黄金时代","level":"1.3.1.4","depth":3,"path":"readings/文学/黄金时代.md","ref":"readings/文学/黄金时代.md","articles":[]},{"title":"我们仨","level":"1.3.1.5","depth":3,"path":"readings/文学/我们仨.md","ref":"readings/文学/我们仨.md","articles":[]},{"title":"京华烟云","level":"1.3.1.6","depth":3,"path":"readings/文学/京华烟云.md","ref":"readings/文学/京华烟云.md","articles":[]},{"title":"钟鼓楼","level":"1.3.1.7","depth":3,"path":"readings/文学/钟鼓楼.md","ref":"readings/文学/钟鼓楼.md","articles":[]},{"title":"许茂和他的女儿们","level":"1.3.1.8","depth":3,"path":"readings/文学/许茂和他的女儿们.md","ref":"readings/文学/许茂和他的女儿们.md","articles":[]},{"title":"李自成","level":"1.3.1.9","depth":3,"path":"readings/文学/李自成.md","ref":"readings/文学/李自成.md","articles":[]}]},{"title":"财经","level":"1.3.2","depth":2,"path":"readings/财经/reading.md","ref":"readings/财经/reading.md","articles":[{"title":"价值","level":"1.3.2.1","depth":3,"path":"readings/财经/价值.md","ref":"readings/财经/价值.md","articles":[]},{"title":"我的经验与教训","level":"1.3.2.2","depth":3,"path":"readings/财经/我的经验与教训.md","ref":"readings/财经/我的经验与教训.md","articles":[]},{"title":"置身事内","level":"1.3.2.3","depth":3,"path":"readings/财经/置身事内.md","ref":"readings/财经/置身事内.md","articles":[]}]},{"title":"社会","level":"1.3.3","depth":2,"path":"readings/社会/reading.md","ref":"readings/社会/reading.md","articles":[{"title":"非暴力沟通","level":"1.3.3.1","depth":3,"path":"readings/社会/非暴力沟通.md","ref":"readings/社会/非暴力沟通.md","articles":[]}]},{"title":"科学","level":"1.3.4","depth":2,"path":"readings/科学/reading.md","ref":"readings/科学/reading.md","articles":[{"title":"现代操作系统","level":"1.3.4.1","depth":3,"path":"readings/科学/现代操作系统.md","ref":"readings/科学/现代操作系统.md","articles":[]},{"title":"深入理解计算机系统","level":"1.3.4.2","depth":3,"path":"computer_system/深入理解计算机系统/深入理解计算机系统.md","ref":"computer_system/深入理解计算机系统/深入理解计算机系统.md","articles":[]},{"title":"程序员的数学","level":"1.3.4.3","depth":3,"path":"readings/科学/程序员的数学/程序员的数学.md","ref":"readings/科学/程序员的数学/程序员的数学.md","articles":[]},{"title":"计算机科学概论","level":"1.3.4.4","depth":3,"path":"readings/科学/计算机科学概论/计算机科学概论.md","ref":"readings/科学/计算机科学概论/计算机科学概论.md","articles":[]},{"title":"计算机体系结构","level":"1.3.4.5","depth":3,"path":"computer_system/计算机体系结构/计算机体系结构.md","ref":"computer_system/计算机体系结构/计算机体系结构.md","articles":[]}]}]},"previous":{"title":"每日一题-2020/03","level":"1.2.6.1","depth":3,"path":"computer_system/leetcode/leetcode_everyday/202003.md","ref":"computer_system/leetcode/leetcode_everyday/202003.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/leetcode/leetcode_week/leetcode_179_week.md","mtime":"2020-03-08T16:01:52.785Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-21T13:52:24.681Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二章 存储器层次结构设计","level":"1.2.2.2","depth":3,"next":{"title":"计算机网络","level":"1.2.3","depth":2,"path":"computer_system/computer_networking/computer_net.md","ref":"computer_system/computer_networking/computer_net.md","articles":[{"title":"云计算网络","level":"1.2.3.1","depth":3,"path":"computer_system/computer_networking/cloud_networking/cloud_net.md","ref":"computer_system/computer_networking/cloud_networking/cloud_net.md","articles":[{"title":"VIRTIO/VHOST","level":"1.2.3.1.1","depth":4,"path":"computer_system/computer_networking/cloud_networking/virtio/virtio.md","ref":"computer_system/computer_networking/cloud_networking/virtio/virtio.md","articles":[{"title":"VIRTIO/VHOST实验环境搭建","level":"1.2.3.1.1.1","depth":5,"path":"computer_system/computer_networking/cloud_networking/virtio/virtio_env.md","ref":"computer_system/computer_networking/cloud_networking/virtio/virtio_env.md","articles":[]},{"title":"VIRTIO/VHOST问题定位","level":"1.2.3.1.1.2","depth":5,"path":"computer_system/computer_networking/cloud_networking/virtio/virtio_qa.md","ref":"computer_system/computer_networking/cloud_networking/virtio/virtio_qa.md","articles":[]}]},{"title":"SmartNIC","level":"1.2.3.1.2","depth":4,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC.md","articles":[{"title":"SmartNIC硬件卸载","level":"1.2.3.1.2.1","depth":5,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC_offload.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/SmartNIC_offload.md","articles":[]},{"title":"virtio-net收发报文分析","level":"1.2.3.1.2.2","depth":5,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/virtio-net.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/virtio-net.md","articles":[]},{"title":"vhost实现分析","level":"1.2.3.1.2.3","depth":5,"path":"computer_system/computer_networking/cloud_networking/SmartNIC/vhost.md","ref":"computer_system/computer_networking/cloud_networking/SmartNIC/vhost.md","articles":[]}]}]}]},"previous":{"title":"第一章 量化设计与分析基础","level":"1.2.2.1","depth":3,"path":"computer_system/计算机体系结构/第一章量化设计与分析基础/chapter1.md","ref":"computer_system/计算机体系结构/第一章量化设计与分析基础/chapter1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","chapter-fold","code","-search","search-pro","github","splitter","tbfed-pagefooter","-sharing","highlight","styles-less","katex","-lunr","-fontsettings","pageview-count"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © Jason 2019-2022","modify_label":"本书发布时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"github":{"url":"https://github.com/movetobe"},"styles-less":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"highlight":{},"back-to-top-button":{},"pageview-count":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jason","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"System","output.name":"site","links":{"sidebar":{"首页":"http://movetobe.github.io"}},"gitbook":"3.2.3","description":"记录成长点滴"},"file":{"path":"computer_system/计算机体系结构/第二章存储器层次结构设计/chapter2.md","mtime":"2022-03-21T13:48:12.409Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-21T13:52:24.681Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
